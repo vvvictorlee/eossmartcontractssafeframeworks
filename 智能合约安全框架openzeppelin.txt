@@ -1,0 +1,280 @@
+
+ballot. c++ eos 已经测试可用
+bid  盲拍
+
+OpenZeppelin合约组织：
+
+access - 智能合约，支持可用于选择性限制和基本授权控制功能的功能。包括地址白名单和基于签名的权限管理。
+
+rbac - 用于管理分配给不同用户角色的地址的库和示例如何处理角色和地址的setter和getter的基于角色的访问控制（RBAC）接口。
+crowdsale - 用于管理令牌众包的智能合约集合，允许投资者购买ETH令牌。包括一个基本合约，以最简单的形式实现基本的众包功能。基本合约可以扩展，以满足您的crowdsale的具体要求。
+
+distribution - 包括基本众筹合约的扩展，可用于定制众筹的完成。
+emission - 包括基础众筹合约的扩展，可用于铸造和管理如何向购买者发放代币。
+price - 包括crowdsale合约的扩展，可用于管理令牌价格的变化。
+validation - 包括crowdsale合约的扩展，可用于强制限制并限制对令牌购买的访问。
+examples - 一组简单的智能合约，演示如何通过多重继承向基础合约添加新功能。
+
+introspection - 可用于制定合约的接口符合ERC-165标准以及使用查找表实现ERC-165的合约。
+
+lifecycle - 用于管理合约及其资金的存在和行为的基本合约的集合。
+
+math - 对发生错误的操作进行安全检查的库。
+
+mocks - 主要用于单元测试的抽象合约集合。它们也是很好的用法示例，演示了在开发自己的自定义应用程序时如何将契约与继承相结合。
+
+ownership - 可用于管理合约和令牌所有权的智能合约的集合
+
+payment - 一组智能合约，可用于通过托管安排，提款和索赔来管理付款。包括对单个收款人和多个收款人的支持。
+
+proposals - 反映社区以太坊改进提案（EIP）的智能合约集合。这些合约正在制定和标准化。它们不建议用于生产，但它们可用于试验未决的EIP标准。点击这里了解更多信息。
+
+token - 经批准的ERC标准令牌的集合 - 它们的接口和实现。
+
+ERC20 - 可替换令牌的标准接口：
+接口 - 包括ERC-20令牌标准基本接口。即，合约的ABI可以代表什么。
+实现 - 包括ERC-20令牌实现，包括所有必需和一些可选的ERC-20功能。
+ERC721 - 非可替代令牌的标准接口
+接口 - 包括ERC-721令牌标准基本接口。即，合约的ABI可以代表什么。
+实现 - 包括ERC-721令牌实现，包括所有必需和一些可选的ERC-721功能。
+
+
+The following provides visibility into how OpenZeppelin's contracts are organized:
+
+access - Smart contracts that enable functionality that can be used for selective restrictions and basic authorization control functions. Includes address whitelisting and signature-based permissions management.
+
+rbac - A library used to manage addresses assigned to different user roles and an example Role-Based Access Control (RBAC) interface that demonstrates how to handle setters and getters for roles and addresses.
+crowdsale - A collection of smart contracts used to manage token crowdsales that allow investors to purchase tokens with ETH. Includes a base contract which implements fundamental crowdsale functionality in its simplest form. The base contract can be extended in order to satisfy your crowdsale’s specific requirements.
+
+distribution - Includes extensions of the base crowdsale contract which can be used to customize the completion of a crowdsale.
+emission - Includes extensions of the base crowdsale contract which can be used to mint and manage how tokens are issued to purchasers.
+price - Includes extensions of the crowdsale contract that can be used to manage changes in token prices.
+validation - Includes extensions of the crowdsale contract that can be used to enforce restraints and limit access to token purchases.
+examples - A collection of simple smart contracts that demonstrate how to add new features to base contracts through multiple inheritance.
+
+introspection - An interface that can be used to make a contract comply with the ERC-165 standard as well as a contract that implements ERC-165 using a lookup table.
+
+lifecycle - A collection of base contracts used to manage the existence and behavior of your contracts and their funds.
+
+math - Libraries with safety checks on operations that throw on errors.
+
+mocks - A collection of abstract contracts that are primarily used for unit testing. They also serve as good usage examples and demonstrate how to combine contracts with inheritence when developing your own custom applications.
+
+ownership - A collection of smart contracts that can be used to manage contract and token ownership
+
+payment - A collection of smart contracts that can be used to manage payments through escrow arrangements, withdrawals, and claims. Includes support for both single payees and multiple payees.
+
+proposals - A collection of smart contracts that reflect community Ethereum Improvement Proposals (EIPs). These contracts are under development and standardization. They are not recommended for production, but they are useful for experimentation with pending EIP standards. Go here for more information.
+
+token - A collection of approved ERC standard tokens -- their interfaces and implementations.
+
+ERC20 - A standard interface for fungible tokens:
+Interfaces - Includes the ERC-20 token standard basic interface. I.e., what the contract’s ABI can represent.
+Implementations - Includes ERC-20 token implementations that include all required and some optional ERC-20 functionality.
+ERC721 - A standard interface for non-fungible tokens
+Interfaces - Includes the ERC-721 token standard basic interface. I.e., what the contract’s ABI can represent.
+Implementations - Includes ERC-721 token implementations that include all required and some optional ERC-721 functionality.
+
+
+|____mocks
+| |____SafeMathMock.sol
+| |____SupportsInterfaceWithLookupMock.sol
+| |____MintedCrowdsaleImpl.sol
+| |____SecureTargetBounty.sol
+| |____ReentrancyAttack.sol
+| |____CappedCrowdsaleImpl.sol
+| |____BouncerMock.sol
+| |____IncreasingPriceCrowdsaleImpl.sol
+| |____TimedCrowdsaleImpl.sol
+| |____MessageHelper.sol
+| |____PausableTokenMock.sol
+| |____ReentrancyMock.sol
+| |____ERC721TokenMock.sol
+| |____LimitBalanceMock.sol
+| |____MerkleProofWrapper.sol
+| |____PullPaymentMock.sol
+| |____PostDeliveryCrowdsaleImpl.sol
+| |____BurnableTokenMock.sol
+| |____BasicTokenMock.sol
+| |____StandardTokenMock.sol
+| |____AllowanceCrowdsaleImpl.sol
+| |____HasNoEtherTest.sol
+| |____InsecureTargetBounty.sol
+| |____IndividuallyCappedCrowdsaleImpl.sol
+| |____ConditionalEscrowMock.sol
+| |____WhitelistMock.sol
+| |____ECRecoveryMock.sol
+| |____DetailedERC20Mock.sol
+| |____RBACCappedTokenMock.sol
+| |____RBACMock.sol
+| |____RefundableCrowdsaleImpl.sol
+| |____AutoIncrementingImpl.sol
+| |____ERC20WithMetadataMock.sol
+| |____ERC721BasicTokenMock.sol
+| |____StandardBurnableTokenMock.sol
+| |____ERC223TokenMock.sol
+| |____DestructibleMock.sol
+| |____ForceEther.sol
+| |____PausableMock.sol
+| |____SafeERC20Helper.sol
+| |____FinalizableCrowdsaleImpl.sol
+| |____WhitelistedCrowdsaleImpl.sol
+| |____ERC721ReceiverMock.sol
+| |____MathMock.sol
+|____token
+| |____ERC20
+| | |____StandardToken.sol
+| | |____StandardBurnableToken.sol
+| | |____TokenTimelock.sol
+| | |____ERC20.sol
+| | |____SafeERC20.sol
+| | |____TokenVesting.sol
+| | |____PausableToken.sol
+| | |____ERC20Basic.sol
+| | |____BurnableToken.sol
+| | |____BasicToken.sol
+| | |____RBACMintableToken.sol
+| | |____MintableToken.sol
+| | |____CappedToken.sol
+| | |____DetailedERC20.sol
+| |____ERC721
+| | |____ERC721Receiver.sol
+| | |____ERC721Token.sol
+| | |____ERC721.sol
+| | |____ERC721BasicToken.sol
+| | |____ERC721Holder.sol
+| | |____DeprecatedERC721.sol
+| | |____ERC721Basic.sol
+|____ReentrancyGuard.sol
+|____access
+| |____rbac
+| | |____Roles.sol
+| | |____RBAC.sol
+| |____Whitelist.sol
+| |____SignatureBouncer.sol
+|____payment
+| |____PullPayment.sol
+| |____SplitPayment.sol
+| |____Escrow.sol
+| |____RefundEscrow.sol
+| |____ConditionalEscrow.sol
+|____lifecycle
+| |____Pausable.sol
+| |____Destructible.sol
+| |____TokenDestructible.sol
+|____crowdsale
+| |____emission
+| | |____MintedCrowdsale.sol
+| | |____AllowanceCrowdsale.sol
+| |____distribution
+| | |____RefundableCrowdsale.sol
+| | |____PostDeliveryCrowdsale.sol
+| | |____FinalizableCrowdsale.sol
+| |____price
+| | |____IncreasingPriceCrowdsale.sol
+| |____Crowdsale.sol
+| |____validation
+| | |____IndividuallyCappedCrowdsale.sol
+| | |____TimedCrowdsale.sol
+| | |____WhitelistedCrowdsale.sol
+| | |____CappedCrowdsale.sol
+|____introspection
+| |____SupportsInterfaceWithLookup.sol
+| |____ERC165.sol
+|____Bounty.sol
+|____math
+| |____SafeMath.sol
+| |____Math.sol
+|____ownership
+| |____HasNoEther.sol
+| |____Claimable.sol
+| |____HasNoTokens.sol
+| |____NoOwner.sol
+| |____Contactable.sol
+| |____Ownable.sol
+| |____DelayedClaimable.sol
+| |____Heritable.sol
+| |____CanReclaimToken.sol
+| |____Superuser.sol
+| |____HasNoContracts.sol
+|____ECRecovery.sol
+|____LimitBalance.sol
+|____examples
+| |____SampleCrowdsale.sol
+| |____RBACWithAdmin.sol
+| |____SimpleSavingsWallet.sol
+| |____SimpleToken.sol
+|____MerkleProof.sol
+|____AutoIncrementing.sol
+|____AddressUtils.sol
+|____proposals
+| |____ERC1046
+| | |____TokenMetadata.sol
+
+
+
+ERC20Basic合约主要定义了ERC20的基本接口，定义了必须要实现的方法:
+
+totalSupply 返回总共发行量
+balanceOf 查询指定address的余额
+transfer 发送指定数目的token到指定账户，同时发送后需要触发Transfer事件
+Transfer事件,任何token发送发生时，必须触发该事件，即使是0额度。 当一个token合约创建时，应该触发一个Transfer事件，token的发送方是0x0，也就是说凭空而来的token，简称空气币。
+
+ERC20.sol
+
+ERC20合约继承了ERC20Basic，另外定义了approve相关的方法:
+
+allowance 获取指定用户的批准额度，控制代币的交易，如可交易账号及资产, 控制Token的流通
+transferFrom 从一个地址向另外一个地址转账指定额度的token，这个方法可以理解为一个收款流程，允许合约来代表token持有者发送代币。比如，合约可以帮助你向另外一个人发送token或者索要token。前提是token拥有者必须要通过某些机制对这个请求进行确认，比如通过MetaMask进行confirm。否则，执行将失败。 跟transfer一样，即使发送0代币，也要触发Transfer事件。
+approve 批准额度，允许一个账户最多能从你的账户你取现指定额度。重复调用时，以最后一次的额度为主。为了防止攻击，最开始这个额度必须设置为0。
+Approval事件，当approve被调用时，需要触发该事件。
+
+DetailedERC20.sol
+
+DetailedERC20 主要定义了token的展示信息:
+
+name token的名称,比如"XXXToken"
+symbol token的符号,比如"XXX"
+decimals token精确的小数点位数，比如18
+BasicToken.sol
+
+通过SafeMath来做运算很重要，在我们自己写合约的时候也尽量使用，可以避免一些计算过程的溢出等安全问题。
+
+StandardToken.sol
+
+上面合约定义的 mapping allowed，它用来记录某个地址允许另外一个地址动用多少token。假设钱包地址为B，有另外一个合约其合约地址为C，合约C会通过支付XXX Token来做一些事情，根据ERC20的定义，每个地址只能操作属于自己的Token，则合约C无法直接使用B地址所拥有的Token，这时候allowed Mapping就派上用场了，它上面可以记录一个允许操作值，像是「B 钱包地址允许 C 合约地址动用属于 B 钱包地址的 1000 XXX Token」，以 Mapping 的结构来说标记为「B => C => 1000」
+
+BurnableToken.sol
+
+该合约比较简单，就是调用者可以销毁一定数量的token，然后totalSupply减去对应销毁的数量
+
+StandardBurnableToken.sol
+
+MintableToken.sol
+
+
+增发token的合约也很简单，就是通过增发一定量的token给对应的address，并给总发行量增加对应的增发token，可以通过调用finishMinting来完成增发。
+
+CappedToken.sol
+
+CappedToken 也很简单，就是在可增发合约上加了一个"cap"，来限制增发的上限
+
+RBACMintableToken.sol
+
+RBACMintableToken 合约将增发操作中添加了RBAC逻辑，就是角色权限管理的逻辑，将一个地址这是为增发者角色，也可以移除一个地址的增发者角色，只有拥有"minter"角色的address才有权限增发token
+
+SafeERC20.sol
+
+SafeERC20 是一个ERC20的安全操作库，在下面的TokenTimelock锁定期后释放token的合约中我们可以看到用法
+
+TokenTimelock.sol
+
+TokenTimelock 合约通过初始化受益人以及释放的时间和锁定的token，通过release来将锁定期过后释放的token转给受益人
+
+TokenVesting.sol
+
+TokenVesting也是锁仓的一种方式，主要解决的是有断崖时间和持续锁仓时间的锁仓场景
+
+PausableToken.sol
+
+PausableToken继承了StandardToken，但是在方法中都添加了whenNotPaused函数修改器，whenNotPaused继承自Pausable合约，Pausable有个paused来标记暂停的状态，从而控制合约的是否暂停。
