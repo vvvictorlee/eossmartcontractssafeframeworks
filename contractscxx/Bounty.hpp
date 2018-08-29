@@ -12,7 +12,16 @@
 class Bounty :public PullPayment, public  Destructible {
   bool public claimed;
   // mapping(account_name => account_name) public researchers;
+ struct researchersx
+  {
+    account_name name;
+    account_name sname;
 
+
+    uint64_t primary_key() const { return name; }
+  };
+
+typedef eosio::multi_index<N(researchers), researchersx> researchers;
   // event TargetCreated(account_name createdAddress);
 
   /**

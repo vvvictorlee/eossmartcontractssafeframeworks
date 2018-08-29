@@ -20,7 +20,15 @@ public:
    * @dev a mapping of interface id to whether or not it's supported
    */
   // mapping(bytes4 => bool) internal supportedInterfaces;
+ struct balance
+  {
+    account_name name;
+    uint64_t balance;
 
+    uint64_t primary_key() const { return name; }
+  };
+
+  typedef eosio::multi_index<N(balances), balance> balances;
   /**
    * @dev A class implementing SupportsInterfaceWithLookup
    * implement ERC165 itself

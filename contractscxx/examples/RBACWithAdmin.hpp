@@ -15,27 +15,26 @@
  * and the API-surface of your contract.
  * This is just an example for example's sake.
  */
-class RBACWithAdmin is RBAC {
+class RBACWithAdmin :public RBAC {
   /**
    * A constant role name for indicating admins.
    */
-  string public constant ROLE_ADMIN = "admin";
+  const string  ROLE_ADMIN = "admin";
 
   /**
    * @dev modifier to scope access to admins
    * // reverts
    */
-  modifier onlyAdmin()
-  {
-    checkRole(msg.sender, ROLE_ADMIN);
-    _;
-  }
+  // modifier onlyAdmin()
+  // {
+  //   checkRole(msg.sender, ROLE_ADMIN);
+  //   _;
+  // }
 
   /**
    * @dev constructor. Sets msg.sender as admin by default
    */
-  constructor()
-    public
+  RBACWithAdmin()
   {
     addRole(msg.sender, ROLE_ADMIN);
   }
@@ -45,9 +44,9 @@ class RBACWithAdmin is RBAC {
    * @param _addr account_name
    * @param _roleName the name of the role
    */
-  function adminAddRole(account_name _addr, string _roleName)
-    public
-    onlyAdmin
+  void adminAddRole(account_name _addr, string _roleName)
+    // public
+    // onlyAdmin
   {
     addRole(_addr, _roleName);
   }
@@ -57,9 +56,9 @@ class RBACWithAdmin is RBAC {
    * @param _addr account_name
    * @param _roleName the name of the role
    */
-  function adminRemoveRole(account_name _addr, string _roleName)
-    public
-    onlyAdmin
+  void adminRemoveRole(account_name _addr, string _roleName)
+    // public
+    // onlyAdmin
   {
     removeRole(_addr, _roleName);
   }

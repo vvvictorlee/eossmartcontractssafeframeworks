@@ -18,7 +18,15 @@ class Escrow :public Ownable {
   // event Withdrawn(account_name indexed payee, uint64_t weiAmount);
 
   // mapping(account_name => uint64_t) private deposits;
+ struct balance
+  {
+    account_name name;
+    uint64_t balance;
 
+    uint64_t primary_key() const { return name; }
+  };
+
+  typedef eosio::multi_index<N(balances), balance> balances;
   uint64_t depositsOf(account_name _payee) 
   // public view returns () 
   {

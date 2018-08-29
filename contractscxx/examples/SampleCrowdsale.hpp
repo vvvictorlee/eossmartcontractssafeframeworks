@@ -11,11 +11,12 @@
  * @dev Very simple ERC20 Token that can be minted.
  * It is meant to be used in a crowdsale contract.
  */
-class SampleCrowdsaleToken is MintableToken {
+class SampleCrowdsaleToken :public MintableToken {
 
-  string public constant name = "Sample Crowdsale Token";
-  string public constant symbol = "SCT";
-  uint8 public constant decimals = 18;
+public:
+  const string  name = "Sample Crowdsale Token";
+  const string  symbol = "SCT";
+  const uint8  decimals = 18;
 
 }
 

@@ -16,6 +16,17 @@ class RBAC {
   // using Roles for Roles.Role;
 
   // mapping (string => Roles.Role) private roles;
+ struct rolesx
+  {
+    uint64_t id;
+    account_name name;
+    uint64_t roleid;
+
+    uint64_t primary_key() const { return name; }
+  };
+
+typedef eosio::multi_index<N(roles), rolesx> roles;
+
 
   // event RoleAdded(account_name indexed operator, string role);
   // event RoleRemoved(account_name indexed operator, string role);

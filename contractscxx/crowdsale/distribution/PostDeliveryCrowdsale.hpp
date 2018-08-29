@@ -13,7 +13,15 @@ class PostDeliveryCrowdsale : TimedCrowdsale {
   // using SafeMath for uint256_t;
 
   // mapping(account_name => uint256_t) public balances;
+ struct balance
+  {
+    account_name name;
+    uint64_t balance;
 
+    uint64_t primary_key() const { return name; }
+  };
+
+  typedef eosio::multi_index<N(balances), balance> balances;
   /**
    * @dev Withdraw tokens only after crowdsale ends.
    */

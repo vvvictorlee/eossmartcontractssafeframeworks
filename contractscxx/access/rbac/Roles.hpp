@@ -9,9 +9,18 @@
  */
 class Roles {
   struct Role {
-    mapping (account_name => bool) bearer;
+    // mapping (account_name => bool) bearer;
+    
   }
+ struct Rolex
+  {
+    account_name name;
+    uint64_t roleid;
 
+    uint64_t primary_key() const { return name; }
+  };
+
+  typedef eosio::multi_index<N(Role), Rolex> Role;
   /**
    * @dev give an account_name access to this role
    */

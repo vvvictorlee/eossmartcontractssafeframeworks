@@ -19,20 +19,65 @@ class ERC721Token : SupportsInterfaceWithLookup, ERC721BasicToken, ERC721 {
   // Token symbol
   string  symbol_;
 
-  // Mapping from owner to list of owned token IDs
-  mapping(account_name => uint256_t[]) internal ownedTokens;
+  // // Mapping from owner to list of owned token IDs
+  // mapping(account_name => uint256_t[]) internal ownedTokens;
 
-  // Mapping from token ID to index of the owner tokens list
-  mapping(uint256_t => uint256_t) internal ownedTokensIndex;
+  // // Mapping from token ID to index of the owner tokens list
+  // mapping(uint256_t => uint256_t) internal ownedTokensIndex;
 
-  // Array with all token ids, used for enumeration
-  uint256_t[]  allTokens;
+  // // Array with all token ids, used for enumeration
+  // uint256_t[]  allTokens;
 
-  // Mapping from token id to position in the allTokens array
-  mapping(uint256_t => uint256_t) internal allTokensIndex;
+  // // Mapping from token id to position in the allTokens array
+  // mapping(uint256_t => uint256_t) internal allTokensIndex;
 
-  // Optional mapping for token URIs
-  mapping(uint256_t => string) internal tokenURIs;
+  // // Optional mapping for token URIs
+  // mapping(uint256_t => string) internal tokenURIs;
+
+ struct ownedTokensx
+  {
+    account_name name;
+    uint64_t balance;
+
+    uint64_t primary_key() const { return name; }
+  };
+
+  typedef eosio::multi_index<N(ownedTokens), ownedTokensx> ownedTokens;
+
+
+   struct ownedTokensIndex
+  {
+    uint64_t name;
+    uint64_t balance;
+
+    uint64_t primary_key() const { return name; }
+  };
+
+  typedef eosio::multi_index<N(ownedTokensIndex), ownedTokensIndexx> ownedTokensIndex;
+
+
+  struct allTokensIndexx
+  {
+    uint64_t name;
+    uint64_t balance;
+
+    uint64_t primary_key() const { return name; }
+  };
+
+  typedef eosio::multi_index<N(allTokensIndex), allTokensIndex> allTokensIndex;
+
+  struct tokenURIsx
+  {
+    uint64_t name;
+    std::string balance;
+
+    uint64_t primary_key() const { return name; }
+  };
+
+  typedef eosio::multi_index<N(tokenURIs), tokenURIsx> tokenURIs;
+
+
+
 
   /**
    * @dev Constructor function

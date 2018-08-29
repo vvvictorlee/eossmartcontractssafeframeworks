@@ -14,7 +14,25 @@ class IndividuallyCappedCrowdsale :public Crowdsale, Ownable {
 
   // mapping(account_name => uint64_t) public contributions;
   // mapping(account_name => uint64_t) public caps;
+ struct balance
+  {
+    account_name name;
+    uint64_t balance;
 
+    uint64_t primary_key() const { return name; }
+  };
+
+  typedef eosio::multi_index<N(balances), balance> balances;
+
+   struct balance
+  {
+    account_name name;
+    uint64_t balance;
+
+    uint64_t primary_key() const { return name; }
+  };
+
+  typedef eosio::multi_index<N(balances), balance> balances;
   /**
    * @dev Sets a specific user's maximum contribution.
    * @param _beneficiary Address to be capped

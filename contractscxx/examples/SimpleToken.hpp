@@ -10,21 +10,21 @@
  * Note they can later distribute these tokens as they wish using `transfer` and other
  * `StandardToken` functions.
  */
-class SimpleToken is StandardToken {
+class SimpleToken :public StandardToken {
 
-  string public constant name = "SimpleToken";
-  string public constant symbol = "SIM";
-  uint8 public constant decimals = 18;
+  const string  name = "SimpleToken";
+  const string  symbol = "SIM";
+  const uint8  decimals = 18;
 
-  uint256_t public constant INITIAL_SUPPLY = 10000 * (10 ** uint256_t(decimals));
+  const uint64_t  INITIAL_SUPPLY = 10000 * (10 ** uint64_t(decimals));
 
   /**
    * @dev Constructor that gives msg.sender all of existing tokens.
    */
-  constructor() public {
+  SimpleToken()  {
     totalSupply_ = INITIAL_SUPPLY;
     balances[msg.sender] = INITIAL_SUPPLY;
-    emit Transfer(account_name(0), msg.sender, INITIAL_SUPPLY);
+    // emit Transfer(account_name(0), msg.sender, INITIAL_SUPPLY);
   }
 
 }
