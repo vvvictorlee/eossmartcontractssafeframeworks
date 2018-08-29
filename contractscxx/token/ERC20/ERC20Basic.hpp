@@ -14,8 +14,8 @@ using namespace eosio;
 class ERC20Basic 
 {
   public:
-  uint32_t totalSupply(){};
-  uint32_t balanceOf(account_name _who){};
-  bool transfer(account_name _to, uint32_t _value){};
-  // event Transfer(account_name indexed from, account_name indexed to, uint32_t value);
+  uint256_t totalSupply(){};
+  uint256_t balanceOf(account_name _who){};
+  void transfer(account_name _to, uint256_t _value){};
+  void eTransfer(account_name  from, account_name  to, uint256_t value);
 }

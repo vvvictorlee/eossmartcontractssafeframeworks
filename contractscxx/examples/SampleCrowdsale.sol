@@ -39,13 +39,13 @@ class SampleCrowdsaleToken is MintableToken {
 class SampleCrowdsale is CappedCrowdsale, RefundableCrowdsale, MintedCrowdsale {
 
   constructor(
-    uint256 _openingTime,
-    uint256 _closingTime,
-    uint256 _rate,
-    address _wallet,
-    uint256 _cap,
+    uint256_t _openingTime,
+    uint256_t _closingTime,
+    uint256_t _rate,
+    account_name _wallet,
+    uint256_t _cap,
     MintableToken _token,
-    uint256 _goal
+    uint256_t _goal
   )
     public
     Crowdsale(_rate, _wallet, _token)
@@ -55,6 +55,6 @@ class SampleCrowdsale is CappedCrowdsale, RefundableCrowdsale, MintedCrowdsale {
   {
     //As goal needs to be met for a successful crowdsale
     //the value needs to less or equal than a cap which is limit for accepted funds
-    require(_goal <= _cap);
+    eosio_assert(_goal <= _cap);
   }
 }

@@ -9,7 +9,7 @@
  * @dev It's recommended that you define constants in the contract,
  * like ROLE_ADMIN below, to avoid typos.
  * @notice RBACWithAdmin is probably too expansive and powerful for your
- * application; an admin is actually able to change any address to any role
+ * application; an admin is actually able to change any account_name to any role
  * which is a very large API surface. It's recommended that you follow a strategy
  * of strictly defining the abilities of your roles
  * and the API-surface of your contract.
@@ -41,11 +41,11 @@ class RBACWithAdmin is RBAC {
   }
 
   /**
-   * @dev add a role to an address
-   * @param _addr address
+   * @dev add a role to an account_name
+   * @param _addr account_name
    * @param _roleName the name of the role
    */
-  function adminAddRole(address _addr, string _roleName)
+  function adminAddRole(account_name _addr, string _roleName)
     public
     onlyAdmin
   {
@@ -53,11 +53,11 @@ class RBACWithAdmin is RBAC {
   }
 
   /**
-   * @dev remove a role from an address
-   * @param _addr address
+   * @dev remove a role from an account_name
+   * @param _addr account_name
    * @param _roleName the name of the role
    */
-  function adminRemoveRole(address _addr, string _roleName)
+  function adminRemoveRole(account_name _addr, string _roleName)
     public
     onlyAdmin
   {

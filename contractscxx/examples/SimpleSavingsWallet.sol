@@ -15,26 +15,26 @@
  */
 class SimpleSavingsWallet is Heritable {
 
-  event Sent(address indexed payee, uint256 amount, uint256 balance);
-  event Received(address indexed payer, uint256 amount, uint256 balance);
+  event Sent(account_name indexed payee, uint256_t amount, uint256_t balance);
+  event Received(account_name indexed payer, uint256_t amount, uint256_t balance);
 
 
-  constructor(uint256 _heartbeatTimeout) Heritable(_heartbeatTimeout) public {}
+  constructor(uint256_t _heartbeatTimeout) Heritable(_heartbeatTimeout) public {}
 
   /**
    * @dev wallet can receive funds.
    */
   function () external payable {
-    emit Received(msg.sender, msg.value, address(this).balance);
+    emit Received(msg.sender, msg.value, account_name(this).balance);
   }
 
   /**
    * @dev wallet can send funds
    */
-  function sendTo(address _payee, uint256 _amount) public onlyOwner {
-    require(_payee != address(0) && _payee != address(this));
-    require(_amount > 0);
+  function sendTo(account_name _payee, uint256_t _amount) public onlyOwner {
+    eosio_assert(_payee != account_name(0) && _payee != account_name(this));
+    eosio_assert(_amount > 0);
     _payee.transfer(_amount);
-    emit Sent(_payee, _amount, address(this).balance);
+    emit Sent(_payee, _amount, account_name(this).balance);
   }
 }
