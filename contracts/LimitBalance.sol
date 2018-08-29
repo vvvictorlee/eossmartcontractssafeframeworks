@@ -1,13 +1,13 @@
-pragma solidity ^0.4.24;
+
 
 
 /**
  * @title LimitBalance
- * @dev Simple contract to limit the balance of child contract.
+ * @dev Simple class to limit the balance of child contract.
  * Note this doesn't prevent other contracts to send funds by using selfdestruct(address);
  * See: https://github.com/ConsenSys/smart-contract-best-practices#remember-that-ether-can-be-forcibly-sent-to-an-account
  */
-contract LimitBalance {
+class LimitBalance {
 
   uint256 public limit;
 

@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
-
-import "../token/ERC20/ERC20.sol";
-import "../crowdsale/validation/CappedCrowdsale.sol";
 
 
-contract CappedCrowdsaleImpl is CappedCrowdsale {
+#include "../token/ERC20/ERC20.hpp"
+#include "../crowdsale/validation/CappedCrowdsale.hpp"
+
+
+class CappedCrowdsaleImpl is CappedCrowdsale {
 
   constructor (
     uint256 _rate,

@@ -1,17 +1,17 @@
 pragma solidity ^0.4.23;
 
-import "../math/SafeMath.sol";
-import "../ownership/Ownable.sol";
+#include "../math/SafeMath.hpp"
+#include "../ownership/Ownable.hpp"
 
 
 /**
  * @title Escrow
  * @dev Base escrow contract, holds funds destinated to a payee until they
- * withdraw them. The contract that uses the escrow as its payment method
+ * withdraw them. The class that uses the escrow as its payment method
  * should be its owner, and provide public methods redirecting to the escrow's
  * deposit and withdraw.
  */
-contract Escrow is Ownable {
+class Escrow is Ownable {
   using SafeMath for uint256;
 
   event Deposited(address indexed payee, uint256 weiAmount);

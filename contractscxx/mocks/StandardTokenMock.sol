@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
 
-import "../token/ERC20/StandardToken.sol";
+
+#include "../token/ERC20/StandardToken.hpp"
 
 
 // mock class using StandardToken
-contract StandardTokenMock is StandardToken {
+class StandardTokenMock is StandardToken {
 
   constructor(address _initialAccount, uint256 _initialBalance) public {
     balances[_initialAccount] = _initialBalance;

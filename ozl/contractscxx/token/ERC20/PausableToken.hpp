@@ -1,4 +1,4 @@
-// pragma solidity ^0.4.24;
+// 
 #include <eosiolib/eosio.hpp>
 #include "./StandardToken.hpp";
 #include "../../lifecycle/Pausable.hpp";

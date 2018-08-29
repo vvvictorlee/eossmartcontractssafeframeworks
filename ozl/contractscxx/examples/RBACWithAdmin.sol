@@ -1,6 +1,6 @@
-pragma solidity ^0.4.24;
 
-import "../access/rbac/RBAC.sol";
+
+#include "../access/rbac/RBAC.hpp"
 
 
 /**
@@ -15,7 +15,7 @@ import "../access/rbac/RBAC.sol";
  * and the API-surface of your contract.
  * This is just an example for example's sake.
  */
-contract RBACWithAdmin is RBAC {
+class RBACWithAdmin is RBAC {
   /**
    * A constant role name for indicating admins.
    */

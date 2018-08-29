@@ -1,13 +1,13 @@
-pragma solidity ^0.4.24;
 
-import "../../introspection/ERC165.sol";
+
+#include "../../introspection/ERC165.hpp"
 
 
 /**
  * @title ERC721 Non-Fungible Token Standard basic interface
  * @dev see https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md
  */
-contract ERC721Basic is ERC165 {
+class ERC721Basic is ERC165 {
 
   bytes4 internal constant InterfaceId_ERC721 = 0x80ac58cd;
   /*

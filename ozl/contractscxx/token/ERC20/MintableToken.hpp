@@ -1,4 +1,4 @@
-// pragma solidity ^0.4.24;
+// 
 #include <eosiolib/asset.hpp>
 #include <eosiolib/eosio.hpp>
 #include "./StandardToken.hpp";
@@ -8,7 +8,7 @@
 /**
  * @title Mintable token
  * @dev Simple ERC20 Token example, with mintable token creation
- * Based on code by TokenMarketNet: https://github.com/TokenMarketNet/ico/blob/master/contracts/MintableToken.sol
+ * Based on code by TokenMarketNet: https://github.com/TokenMarketNet/ico/blob/master/contracts/MintableToken.hpp"
  */
 class MintableToken : StandardToken, Ownable {
   // event Mint(account_name indexed to, uint32_t amount);

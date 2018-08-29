@@ -1,14 +1,14 @@
-pragma solidity ^0.4.24;
 
-import "../../math/SafeMath.sol";
-import "../Crowdsale.sol";
+
+#include "../../math/SafeMath.hpp"
+#include "../Crowdsale.hpp"
 
 
 /**
  * @title CappedCrowdsale
  * @dev Crowdsale with a limit for total contributions.
  */
-contract CappedCrowdsale is Crowdsale {
+class CappedCrowdsale is Crowdsale {
   using SafeMath for uint256;
 
   uint256 public cap;

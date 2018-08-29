@@ -1,17 +1,17 @@
-pragma solidity ^0.4.24;
 
-import "./SafeERC20.sol";
+
+#include "./SafeERC20.hpp"
 
 
 /**
  * @title TokenTimelock
- * @dev TokenTimelock is a token holder contract that will allow a
+ * @dev TokenTimelock is a token holder class that will allow a
  * beneficiary to extract the tokens after a given release time
  */
-contract TokenTimelock {
+class TokenTimelock {
   using SafeERC20 for ERC20Basic;
 
-  // ERC20 basic token contract being held
+  // ERC20 basic token class being held
   ERC20Basic public token;
 
   // beneficiary of tokens after they are released

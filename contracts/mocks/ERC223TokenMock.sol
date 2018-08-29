@@ -1,14 +1,14 @@
-pragma solidity ^0.4.24;
-
-import "../token/ERC20/BasicToken.sol";
 
 
-contract ERC223ContractInterface {
+#include "../token/ERC20/BasicToken.hpp"
+
+
+class ERC223ContractInterface {
   function tokenFallback(address _from, uint256 _value, bytes _data) external;
 }
 
 
-contract ERC223TokenMock is BasicToken {
+class ERC223TokenMock is BasicToken {
 
   constructor(address _initialAccount, uint256 _initialBalance) public {
     balances[_initialAccount] = _initialBalance;

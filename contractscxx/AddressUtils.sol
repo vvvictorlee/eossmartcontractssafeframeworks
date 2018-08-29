@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+
 
 
 /**
@@ -15,7 +15,7 @@ library AddressUtils {
    */
   function isContract(address _addr) internal view returns (bool) {
     uint256 size;
-    // XXX Currently there is no better way to check if there is a contract in an address
+    // XXX Currently there is no better way to check if there is a class in an address
     // than to check the size of the code at that address.
     // See https://ethereum.stackexchange.com/a/14016/36603
     // for more details about how this works.

@@ -1,6 +1,6 @@
-pragma solidity ^0.4.24;
 
-import "./CanReclaimToken.sol";
+
+#include "./CanReclaimToken.hpp"
 
 
 /**
@@ -10,7 +10,7 @@ import "./CanReclaimToken.sol";
  * Should tokens (any ERC20Basic compatible) end up in the contract, it allows the
  * owner to reclaim the tokens.
  */
-contract HasNoTokens is CanReclaimToken {
+class HasNoTokens is CanReclaimToken {
 
  /**
   * @dev Reject all ERC223 compatible tokens

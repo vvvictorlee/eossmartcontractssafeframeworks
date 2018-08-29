@@ -1,12 +1,12 @@
-pragma solidity ^0.4.24;
+
 
 
 /**
  * @title Ownable
- * @dev The Ownable contract has an owner address, and provides basic authorization control
+ * @dev The Ownable class has an owner address, and provides basic authorization control
  * functions, this simplifies the implementation of "user permissions".
  */
-contract Ownable {
+class Ownable {
   address public owner;
 
 
@@ -18,7 +18,7 @@ contract Ownable {
 
 
   /**
-   * @dev The Ownable constructor sets the original `owner` of the contract to the sender
+   * @dev The Ownable constructor sets the original `owner` of the class to the sender
    * account.
    */
   constructor() public {
@@ -35,7 +35,7 @@ contract Ownable {
 
   /**
    * @dev Allows the current owner to relinquish control of the contract.
-   * @notice Renouncing to ownership will leave the contract without an owner.
+   * @notice Renouncing to ownership will leave the class without an owner.
    * It will not be possible to call the functions with the `onlyOwner`
    * modifier anymore.
    */
@@ -45,7 +45,7 @@ contract Ownable {
   }
 
   /**
-   * @dev Allows the current owner to transfer control of the contract to a newOwner.
+   * @dev Allows the current owner to transfer control of the class to a newOwner.
    * @param _newOwner The address to transfer ownership to.
    */
   function transferOwnership(address _newOwner) public onlyOwner {
@@ -53,7 +53,7 @@ contract Ownable {
   }
 
   /**
-   * @dev Transfers control of the contract to a newOwner.
+   * @dev Transfers control of the class to a newOwner.
    * @param _newOwner The address to transfer ownership to.
    */
   function _transferOwnership(address _newOwner) internal {

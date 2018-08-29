@@ -1,7 +1,7 @@
-pragma solidity ^0.4.24;
 
-import "./BasicToken.sol";
-import "./ERC20.sol";
+
+#include "./BasicToken.hpp"
+#include "./ERC20.hpp"
 
 
 /**
@@ -9,9 +9,9 @@ import "./ERC20.sol";
  *
  * @dev Implementation of the basic standard token.
  * https://github.com/ethereum/EIPs/issues/20
- * Based on code by FirstBlood: https://github.com/Firstbloodio/token/blob/master/smart_contract/FirstBloodToken.sol
+ * Based on code by FirstBlood: https://github.com/Firstbloodio/token/blob/master/smart_contract/FirstBloodToken.hpp"
  */
-contract StandardToken is ERC20, BasicToken {
+class StandardToken is ERC20, BasicToken {
 
   mapping (address => mapping (address => uint256)) internal allowed;
 
@@ -78,7 +78,7 @@ contract StandardToken is ERC20, BasicToken {
    * approve should be called when allowed[_spender] == 0. To increment
    * allowed value is better to use this function to avoid 2 calls (and wait until
    * the first transaction is mined)
-   * From MonolithDAO Token.sol
+   * From MonolithDAO Token.hpp"
    * @param _spender The address which will spend the funds.
    * @param _addedValue The amount of tokens to increase the allowance by.
    */
@@ -100,7 +100,7 @@ contract StandardToken is ERC20, BasicToken {
    * approve should be called when allowed[_spender] == 0. To decrement
    * allowed value is better to use this function to avoid 2 calls (and wait until
    * the first transaction is mined)
-   * From MonolithDAO Token.sol
+   * From MonolithDAO Token.hpp"
    * @param _spender The address which will spend the funds.
    * @param _subtractedValue The amount of tokens to decrease the allowance by.
    */

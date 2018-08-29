@@ -1,6 +1,6 @@
-pragma solidity ^0.4.24;
 
-import "./ERC165.sol";
+
+#include "./ERC165.hpp"
 
 
 /**
@@ -8,7 +8,7 @@ import "./ERC165.sol";
  * @author Matt Condon (@shrugs)
  * @dev Implements ERC165 using a lookup table.
  */
-contract SupportsInterfaceWithLookup is ERC165 {
+class SupportsInterfaceWithLookup is ERC165 {
 
   bytes4 public constant InterfaceId_ERC165 = 0x01ffc9a7;
   /**
@@ -22,7 +22,7 @@ contract SupportsInterfaceWithLookup is ERC165 {
   mapping(bytes4 => bool) internal supportedInterfaces;
 
   /**
-   * @dev A contract implementing SupportsInterfaceWithLookup
+   * @dev A class implementing SupportsInterfaceWithLookup
    * implement ERC165 itself
    */
   constructor()

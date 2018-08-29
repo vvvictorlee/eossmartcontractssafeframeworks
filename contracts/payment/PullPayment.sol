@@ -1,14 +1,14 @@
-pragma solidity ^0.4.24;
 
-import "./Escrow.sol";
+
+#include "./Escrow.hpp"
 
 
 /**
  * @title PullPayment
- * @dev Base contract supporting async send for pull payments. Inherit from this
- * contract and use asyncTransfer instead of send or transfer.
+ * @dev Base class supporting async send for pull payments. Inherit from this
+ * class and use asyncTransfer instead of send or transfer.
  */
-contract PullPayment {
+class PullPayment {
   Escrow private escrow;
 
   constructor() public {

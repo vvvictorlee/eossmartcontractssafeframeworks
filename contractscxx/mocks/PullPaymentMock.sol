@@ -1,11 +1,11 @@
-pragma solidity ^0.4.24;
 
 
-import "../payment/PullPayment.sol";
+
+#include "../payment/PullPayment.hpp"
 
 
 // mock class using PullPayment
-contract PullPaymentMock is PullPayment {
+class PullPaymentMock is PullPayment {
 
   constructor() public payable { }
 

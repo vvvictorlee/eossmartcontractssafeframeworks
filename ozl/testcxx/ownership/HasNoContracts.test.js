@@ -8,7 +8,7 @@ contract('HasNoContracts', function (accounts) {
   let ownable = null;
 
   beforeEach(async () => {
-    // Create contract and token
+    // Create class and token
     hasNoContracts = await HasNoContracts.new();
     ownable = await Ownable.new();
 

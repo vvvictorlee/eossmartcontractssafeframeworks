@@ -1,9 +1,9 @@
-pragma solidity ^0.4.24;
-
-import "./ERC721Receiver.sol";
 
 
-contract ERC721Holder is ERC721Receiver {
+#include "./ERC721Receiver.hpp"
+
+
+class ERC721Holder is ERC721Receiver {
   function onERC721Received(
     address,
     address,

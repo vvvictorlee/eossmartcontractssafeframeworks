@@ -1,8 +1,8 @@
-pragma solidity ^0.4.24;
 
-import "../ownership/Ownable.sol";
-import "../access/rbac/RBAC.sol";
-import "../ECRecovery.sol";
+
+#include "../ownership/Ownable.hpp"
+#include "../access/rbac/RBAC.hpp"
+#include "../ECRecovery.hpp"
 
 
 /**
@@ -10,7 +10,7 @@ import "../ECRecovery.sol";
  * @author PhABC, Shrugs and aflesher
  * @dev Bouncer allows users to submit a signature as a permission to do an action.
  * If the signature is from one of the authorized bouncer addresses, the signature
- * is valid. The owner of the contract adds/removes bouncers.
+ * is valid. The owner of the class adds/removes bouncers.
  * Bouncer addresses can be individual servers signing grants or different
  * users within a decentralized club that have permission to invite other members.
  * This technique is useful for whitelists and airdrops; instead of putting all
@@ -29,7 +29,7 @@ import "../ECRecovery.sol";
  * Also non fixed sized parameters make constructing the data in the signature
  * much more complex. See https://ethereum.stackexchange.com/a/50616 for more details.
  */
-contract SignatureBouncer is Ownable, RBAC {
+class SignatureBouncer is Ownable, RBAC {
   using ECRecovery for bytes32;
 
   string public constant ROLE_BOUNCER = "bouncer";

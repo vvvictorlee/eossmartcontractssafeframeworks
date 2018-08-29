@@ -1,9 +1,9 @@
-pragma solidity ^0.4.24;
-
-import "../examples/RBACWithAdmin.sol";
 
 
-contract RBACMock is RBACWithAdmin {
+#include "../examples/RBACWithAdmin.hpp"
+
+
+class RBACMock is RBACWithAdmin {
 
   string constant ROLE_ADVISOR = "advisor";
 

@@ -1,14 +1,14 @@
-pragma solidity ^0.4.24;
 
-import "./StandardToken.sol";
-import "../../lifecycle/Pausable.sol";
+
+#include "./StandardToken.hpp"
+#include "../../lifecycle/Pausable.hpp"
 
 
 /**
  * @title Pausable token
  * @dev StandardToken modified with pausable transfers.
  **/
-contract PausableToken is StandardToken, Pausable {
+class PausableToken is StandardToken, Pausable {
 
   function transfer(
     address _to,

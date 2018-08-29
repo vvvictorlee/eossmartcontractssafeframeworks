@@ -1,7 +1,7 @@
-pragma solidity ^0.4.24;
 
-import "./ERC20Basic.sol";
-import "./ERC20.sol";
+
+#include "./ERC20Basic.hpp"
+#include "./ERC20.hpp"
 
 
 /**

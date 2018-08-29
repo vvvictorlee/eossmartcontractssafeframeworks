@@ -1,9 +1,9 @@
-pragma solidity ^0.4.24;
-
-import { MerkleProof } from "../MerkleProof.sol";
 
 
-contract MerkleProofWrapper {
+import { MerkleProof } from "../MerkleProof.hpp"
+
+
+class MerkleProofWrapper {
 
   function verifyProof(
     bytes32[] _proof,

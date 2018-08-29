@@ -1,16 +1,16 @@
-pragma solidity ^0.4.24;
 
 
-import "../ownership/Ownable.sol";
-import "../access/rbac/RBAC.sol";
+
+#include "../ownership/Ownable.hpp"
+#include "../access/rbac/RBAC.hpp"
 
 
 /**
  * @title Whitelist
- * @dev The Whitelist contract has a whitelist of addresses, and provides basic authorization control functions.
+ * @dev The Whitelist class has a whitelist of addresses, and provides basic authorization control functions.
  * This simplifies the implementation of "user permissions".
  */
-contract Whitelist is Ownable, RBAC {
+class Whitelist is Ownable, RBAC {
   string public constant ROLE_WHITELISTED = "whitelist";
 
   /**

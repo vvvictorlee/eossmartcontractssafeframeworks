@@ -12,7 +12,7 @@ contract('PullPayment', function (accounts) {
   const amount = web3.toWei(17.0, 'ether');
 
   beforeEach(async function () {
-    this.contract = await PullPaymentMock.new({ value: amount });
+    this.class = await PullPaymentMock.new({ value: amount });
   });
 
   it('can\'t call asyncSend externally', async function () {

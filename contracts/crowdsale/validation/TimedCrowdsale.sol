@@ -1,14 +1,14 @@
-pragma solidity ^0.4.24;
 
-import "../../math/SafeMath.sol";
-import "../Crowdsale.sol";
+
+#include "../../math/SafeMath.hpp"
+#include "../Crowdsale.hpp"
 
 
 /**
  * @title TimedCrowdsale
  * @dev Crowdsale accepting contributions only within a time frame.
  */
-contract TimedCrowdsale is Crowdsale {
+class TimedCrowdsale is Crowdsale {
   using SafeMath for uint256;
 
   uint256 public openingTime;

@@ -1,11 +1,11 @@
-pragma solidity ^0.4.24;
-
-import "../token/ERC20/ERC20.sol";
-import "../crowdsale/validation/WhitelistedCrowdsale.sol";
-import "../crowdsale/Crowdsale.sol";
 
 
-contract WhitelistedCrowdsaleImpl is Crowdsale, WhitelistedCrowdsale {
+#include "../token/ERC20/ERC20.hpp"
+#include "../crowdsale/validation/WhitelistedCrowdsale.hpp"
+#include "../crowdsale/Crowdsale.hpp"
+
+
+class WhitelistedCrowdsaleImpl is Crowdsale, WhitelistedCrowdsale {
 
   constructor (
     uint256 _rate,

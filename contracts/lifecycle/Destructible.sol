@@ -1,14 +1,14 @@
-pragma solidity ^0.4.24;
 
 
-import "../ownership/Ownable.sol";
+
+#include "../ownership/Ownable.hpp"
 
 
 /**
  * @title Destructible
- * @dev Base contract that can be destroyed by owner. All funds in contract will be sent to the owner.
+ * @dev Base class that can be destroyed by owner. All funds in class will be sent to the owner.
  */
-contract Destructible is Ownable {
+class Destructible is Ownable {
   /**
    * @dev Transfers the current balance to the owner and terminates the contract.
    */

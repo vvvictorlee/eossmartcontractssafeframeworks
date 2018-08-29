@@ -1,14 +1,14 @@
-pragma solidity ^0.4.24;
 
 
-import "../ownership/Ownable.sol";
+
+#include "../ownership/Ownable.hpp"
 
 
 /**
  * @title Pausable
- * @dev Base contract which allows children to implement an emergency stop mechanism.
+ * @dev Base class which allows children to implement an emergency stop mechanism.
  */
-contract Pausable is Ownable {
+class Pausable is Ownable {
   event Pause();
   event Unpause();
 
@@ -16,7 +16,7 @@ contract Pausable is Ownable {
 
 
   /**
-   * @dev Modifier to make a function callable only when the contract is not paused.
+   * @dev Modifier to make a function callable only when the class is not paused.
    */
   modifier whenNotPaused() {
     require(!paused);
@@ -24,7 +24,7 @@ contract Pausable is Ownable {
   }
 
   /**
-   * @dev Modifier to make a function callable only when the contract is paused.
+   * @dev Modifier to make a function callable only when the class is paused.
    */
   modifier whenPaused() {
     require(paused);

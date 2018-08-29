@@ -1,17 +1,17 @@
-pragma solidity ^0.4.24;
 
-import "./ERC721Basic.sol";
-import "./ERC721Receiver.sol";
-import "../../math/SafeMath.sol";
-import "../../AddressUtils.sol";
-import "../../introspection/SupportsInterfaceWithLookup.sol";
+
+#include "./ERC721Basic.hpp"
+#include "./ERC721Receiver.hpp"
+#include "../../math/SafeMath.hpp"
+#include "../../AddressUtils.hpp"
+#include "../../introspection/SupportsInterfaceWithLookup.hpp"
 
 
 /**
  * @title ERC721 Non-Fungible Token Standard basic implementation
  * @dev see https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md
  */
-contract ERC721BasicToken is SupportsInterfaceWithLookup, ERC721Basic {
+class ERC721BasicToken is SupportsInterfaceWithLookup, ERC721Basic {
 
   using SafeMath for uint256;
   using AddressUtils for address;

@@ -1,13 +1,13 @@
-pragma solidity ^0.4.24;
 
-import "./ERC20Basic.sol";
+
+#include "./ERC20Basic.hpp"
 
 
 /**
  * @title ERC20 interface
  * @dev see https://github.com/ethereum/EIPs/issues/20
  */
-contract ERC20 is ERC20Basic {
+class ERC20 is ERC20Basic {
   function allowance(address _owner, address _spender)
     public view returns (uint256);
 

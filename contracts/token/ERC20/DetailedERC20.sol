@@ -1,6 +1,6 @@
-pragma solidity ^0.4.24;
 
-import "./ERC20.sol";
+
+#include "./ERC20.hpp"
 
 
 /**
@@ -9,7 +9,7 @@ import "./ERC20.sol";
  * All the operations are done using the smallest and indivisible token unit,
  * just as on Ethereum all the operations are done in wei.
  */
-contract DetailedERC20 is ERC20 {
+class DetailedERC20 is ERC20 {
   string public name;
   string public symbol;
   uint8 public decimals;

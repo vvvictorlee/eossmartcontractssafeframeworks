@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
 
 
-import "../../contracts/math/Math.sol";
+
+#include "../../contracts/math/Math.hpp"
 
 
-contract MathMock {
+class MathMock {
   uint64 public result64;
   uint256 public result256;
 

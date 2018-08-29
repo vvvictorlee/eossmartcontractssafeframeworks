@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
 
 
-import "../ECRecovery.sol";
+
+#include "../ECRecovery.hpp"
 
 
-contract ECRecoveryMock {
+class ECRecoveryMock {
   using ECRecovery for bytes32;
 
   function recover(bytes32 _hash, bytes _sig)

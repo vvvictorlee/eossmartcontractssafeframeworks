@@ -1,11 +1,11 @@
-pragma solidity ^0.4.24;
 
 
-import "../payment/ConditionalEscrow.sol";
+
+#include "../payment/ConditionalEscrow.hpp"
 
 
 // mock class using ConditionalEscrow
-contract ConditionalEscrowMock is ConditionalEscrow {
+class ConditionalEscrowMock is ConditionalEscrow {
   mapping(address => bool) public allowed;
 
   function setAllowed(address _payee, bool _allowed) public {

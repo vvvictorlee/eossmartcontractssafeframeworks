@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
-
-import "../token/ERC20/ERC20.sol";
-import "../token/ERC20/SafeERC20.sol";
 
 
-contract ERC20FailingMock is ERC20 {
+#include "../token/ERC20/ERC20.hpp"
+#include "../token/ERC20/SafeERC20.hpp"
+
+
+class ERC20FailingMock is ERC20 {
   function totalSupply() public view returns (uint256) {
     return 0;
   }
@@ -31,7 +31,7 @@ contract ERC20FailingMock is ERC20 {
 }
 
 
-contract ERC20SucceedingMock is ERC20 {
+class ERC20SucceedingMock is ERC20 {
   function totalSupply() public view returns (uint256) {
     return 0;
   }
@@ -58,7 +58,7 @@ contract ERC20SucceedingMock is ERC20 {
 }
 
 
-contract SafeERC20Helper {
+class SafeERC20Helper {
   using SafeERC20 for ERC20;
 
   ERC20 failing;

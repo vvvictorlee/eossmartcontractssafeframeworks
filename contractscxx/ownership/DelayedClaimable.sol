@@ -1,6 +1,6 @@
-pragma solidity ^0.4.24;
 
-import "./Claimable.sol";
+
+#include "./Claimable.hpp"
 
 
 /**
@@ -8,7 +8,7 @@ import "./Claimable.sol";
  * @dev Extension for the Claimable contract, where the ownership needs to be claimed before/after
  * a certain block number.
  */
-contract DelayedClaimable is Claimable {
+class DelayedClaimable is Claimable {
 
   uint256 public end;
   uint256 public start;

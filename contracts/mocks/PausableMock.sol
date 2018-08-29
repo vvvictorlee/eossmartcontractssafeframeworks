@@ -1,11 +1,11 @@
-pragma solidity ^0.4.24;
 
 
-import "../lifecycle/Pausable.sol";
+
+#include "../lifecycle/Pausable.hpp"
 
 
 // mock class using Pausable
-contract PausableMock is Pausable {
+class PausableMock is Pausable {
   bool public drasticMeasureTaken;
   uint256 public count;
 

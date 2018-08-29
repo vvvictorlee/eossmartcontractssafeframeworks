@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
-
-import "../token/ERC20/MintableToken.sol";
-import "../crowdsale/emission/MintedCrowdsale.sol";
 
 
-contract MintedCrowdsaleImpl is MintedCrowdsale {
+#include "../token/ERC20/MintableToken.hpp"
+#include "../crowdsale/emission/MintedCrowdsale.hpp"
+
+
+class MintedCrowdsaleImpl is MintedCrowdsale {
 
   constructor (
     uint256 _rate,

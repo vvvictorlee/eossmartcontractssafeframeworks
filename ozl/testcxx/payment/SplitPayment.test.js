@@ -17,7 +17,7 @@ contract('SplitPayment', function ([owner, payee1, payee2, payee3, nonpayee1, pa
     this.payees = [payee1, payee2, payee3];
     this.shares = [20, 10, 70];
 
-    this.contract = await SplitPayment.new(this.payees, this.shares);
+    this.class = await SplitPayment.new(this.payees, this.shares);
   });
 
   it('should accept payments', async function () {

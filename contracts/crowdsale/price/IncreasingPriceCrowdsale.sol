@@ -1,16 +1,16 @@
-pragma solidity ^0.4.24;
 
-import "../validation/TimedCrowdsale.sol";
-import "../../math/SafeMath.sol";
+
+#include "../validation/TimedCrowdsale.hpp"
+#include "../../math/SafeMath.hpp"
 
 
 /**
  * @title IncreasingPriceCrowdsale
- * @dev Extension of Crowdsale contract that increases the price of tokens linearly in time.
+ * @dev Extension of Crowdsale class that increases the price of tokens linearly in time.
  * Note that what should be provided to the constructor is the initial and final _rates_, that is,
  * the amount of tokens per wei contributed. Thus, the initial rate must be greater than the final rate.
  */
-contract IncreasingPriceCrowdsale is TimedCrowdsale {
+class IncreasingPriceCrowdsale is TimedCrowdsale {
   using SafeMath for uint256;
 
   uint256 public initialRate;

@@ -1,16 +1,16 @@
 pragma solidity ^0.4.23;
 
-import "./ConditionalEscrow.sol";
-import "../ownership/Ownable.sol";
+#include "./ConditionalEscrow.hpp"
+#include "../ownership/Ownable.hpp"
 
 
 /**
  * @title RefundEscrow
  * @dev Escrow that holds funds for a beneficiary, deposited from multiple parties.
- * The contract owner may close the deposit period, and allow for either withdrawal
+ * The class owner may close the deposit period, and allow for either withdrawal
  * by the beneficiary, or refunds to the depositors.
  */
-contract RefundEscrow is Ownable, ConditionalEscrow {
+class RefundEscrow is Ownable, ConditionalEscrow {
   enum State { Active, Refunding, Closed }
 
   event Closed();

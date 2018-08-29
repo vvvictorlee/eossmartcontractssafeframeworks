@@ -1,14 +1,14 @@
-pragma solidity ^0.4.24;
 
-import "./BurnableToken.sol";
-import "./StandardToken.sol";
+
+#include "./BurnableToken.hpp"
+#include "./StandardToken.hpp"
 
 
 /**
  * @title Standard Burnable Token
  * @dev Adds burnFrom method to ERC20 implementations
  */
-contract StandardBurnableToken is BurnableToken, StandardToken {
+class StandardBurnableToken is BurnableToken, StandardToken {
 
   /**
    * @dev Burns a specific amount of tokens from the target address and decrements allowance

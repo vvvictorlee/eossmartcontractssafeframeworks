@@ -1,6 +1,6 @@
-pragma solidity ^0.4.24;
 
-import "./Roles.sol";
+
+#include "./Roles.hpp"
 
 
 /**
@@ -8,11 +8,11 @@ import "./Roles.sol";
  * @author Matt Condon (@Shrugs)
  * @dev Stores and provides setters and getters for roles and addresses.
  * Supports unlimited numbers of roles and addresses.
- * See //contracts/mocks/RBACMock.sol for an example of usage.
+ * See //contracts/mocks/RBACMock.hpp" for an example of usage.
  * This RBAC method uses strings to key roles. It may be beneficial
  * for you to write your own implementation of this interface using Enums or similar.
  */
-contract RBAC {
+class RBAC {
   using Roles for Roles.Role;
 
   mapping (string => Roles.Role) private roles;

@@ -1,20 +1,20 @@
 /* solium-disable security/no-block-members */
 
-pragma solidity ^0.4.24;
 
-import "./ERC20Basic.sol";
-import "./SafeERC20.sol";
-import "../../ownership/Ownable.sol";
-import "../../math/SafeMath.sol";
+
+#include "./ERC20Basic.hpp"
+#include "./SafeERC20.hpp"
+#include "../../ownership/Ownable.hpp"
+#include "../../math/SafeMath.hpp"
 
 
 /**
  * @title TokenVesting
- * @dev A token holder contract that can release its token balance gradually like a
+ * @dev A token holder class that can release its token balance gradually like a
  * typical vesting scheme, with a cliff and vesting period. Optionally revocable by the
  * owner.
  */
-contract TokenVesting is Ownable {
+class TokenVesting is Ownable {
   using SafeMath for uint256;
   using SafeERC20 for ERC20Basic;
 
@@ -34,7 +34,7 @@ contract TokenVesting is Ownable {
   mapping (address => bool) public revoked;
 
   /**
-   * @dev Creates a vesting contract that vests its balance of any ERC20 token to the
+   * @dev Creates a vesting class that vests its balance of any ERC20 token to the
    * _beneficiary, gradually in a linear fashion until _start + _duration. By then all
    * of the balance will have vested.
    * @param _beneficiary address of the beneficiary to whom vested tokens are transferred

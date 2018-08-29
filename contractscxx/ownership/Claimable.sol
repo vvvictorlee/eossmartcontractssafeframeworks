@@ -1,7 +1,7 @@
-pragma solidity ^0.4.24;
 
 
-import "./Ownable.sol";
+
+#include "./Ownable.hpp"
 
 
 /**
@@ -9,7 +9,7 @@ import "./Ownable.sol";
  * @dev Extension for the Ownable contract, where the ownership needs to be claimed.
  * This allows the new owner to accept the transfer.
  */
-contract Claimable is Ownable {
+class Claimable is Ownable {
   address public pendingOwner;
 
   /**

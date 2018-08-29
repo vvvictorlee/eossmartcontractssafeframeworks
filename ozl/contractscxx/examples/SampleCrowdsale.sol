@@ -1,9 +1,9 @@
-pragma solidity ^0.4.24;
 
-import "../crowdsale/validation/CappedCrowdsale.sol";
-import "../crowdsale/distribution/RefundableCrowdsale.sol";
-import "../crowdsale/emission/MintedCrowdsale.sol";
-import "../token/ERC20/MintableToken.sol";
+
+#include "../crowdsale/validation/CappedCrowdsale.hpp"
+#include "../crowdsale/distribution/RefundableCrowdsale.hpp"
+#include "../crowdsale/emission/MintedCrowdsale.hpp"
+#include "../token/ERC20/MintableToken.hpp"
 
 
 /**
@@ -11,7 +11,7 @@ import "../token/ERC20/MintableToken.sol";
  * @dev Very simple ERC20 Token that can be minted.
  * It is meant to be used in a crowdsale contract.
  */
-contract SampleCrowdsaleToken is MintableToken {
+class SampleCrowdsaleToken is MintableToken {
 
   string public constant name = "Sample Crowdsale Token";
   string public constant symbol = "SCT";
@@ -36,7 +36,7 @@ contract SampleCrowdsaleToken is MintableToken {
 // https://github.com/duaraghav8/Solium/issues/205
 // --elopio - 2018-05-10
 // solium-disable-next-line max-len
-contract SampleCrowdsale is CappedCrowdsale, RefundableCrowdsale, MintedCrowdsale {
+class SampleCrowdsale is CappedCrowdsale, RefundableCrowdsale, MintedCrowdsale {
 
   constructor(
     uint256_t _openingTime,

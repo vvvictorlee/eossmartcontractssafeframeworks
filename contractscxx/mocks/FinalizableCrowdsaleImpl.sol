@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
-
-import "../token/ERC20/MintableToken.sol";
-import "../crowdsale/distribution/FinalizableCrowdsale.sol";
 
 
-contract FinalizableCrowdsaleImpl is FinalizableCrowdsale {
+#include "../token/ERC20/MintableToken.hpp"
+#include "../crowdsale/distribution/FinalizableCrowdsale.hpp"
+
+
+class FinalizableCrowdsaleImpl is FinalizableCrowdsale {
 
   constructor (
     uint256 _openingTime,

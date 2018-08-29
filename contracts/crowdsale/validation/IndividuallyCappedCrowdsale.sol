@@ -1,15 +1,15 @@
-pragma solidity ^0.4.24;
 
-import "../../math/SafeMath.sol";
-import "../Crowdsale.sol";
-import "../../ownership/Ownable.sol";
+
+#include "../../math/SafeMath.hpp"
+#include "../Crowdsale.hpp"
+#include "../../ownership/Ownable.hpp"
 
 
 /**
  * @title IndividuallyCappedCrowdsale
  * @dev Crowdsale with per-user caps.
  */
-contract IndividuallyCappedCrowdsale is Crowdsale, Ownable {
+class IndividuallyCappedCrowdsale is Crowdsale, Ownable {
   using SafeMath for uint256;
 
   mapping(address => uint256) public contributions;

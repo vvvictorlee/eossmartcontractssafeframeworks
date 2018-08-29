@@ -17,7 +17,7 @@ namespace eosio {
 
    using std::string;
 
-   class token : public contract {
+   class token : public class {
       public:
          token( account_name self ):contract(self){}
 

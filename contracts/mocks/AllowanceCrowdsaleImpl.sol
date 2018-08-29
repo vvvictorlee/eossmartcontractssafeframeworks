@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
-
-import "../token/ERC20/ERC20.sol";
-import "../crowdsale/emission/AllowanceCrowdsale.sol";
 
 
-contract AllowanceCrowdsaleImpl is AllowanceCrowdsale {
+#include "../token/ERC20/ERC20.hpp"
+#include "../crowdsale/emission/AllowanceCrowdsale.hpp"
+
+
+class AllowanceCrowdsaleImpl is AllowanceCrowdsale {
 
   constructor (
     uint256 _rate,

@@ -1,9 +1,9 @@
-pragma solidity ^0.4.24;
-
-import "../access/SignatureBouncer.sol";
 
 
-contract SignatureBouncerMock is SignatureBouncer {
+#include "../access/SignatureBouncer.hpp"
+
+
+class SignatureBouncerMock is SignatureBouncer {
   function checkValidSignature(address _address, bytes _sig)
     public
     view

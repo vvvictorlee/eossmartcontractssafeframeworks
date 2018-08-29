@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
-
-import "../token/ERC20/ERC20.sol";
-import "../crowdsale/validation/TimedCrowdsale.sol";
 
 
-contract TimedCrowdsaleImpl is TimedCrowdsale {
+#include "../token/ERC20/ERC20.hpp"
+#include "../crowdsale/validation/TimedCrowdsale.hpp"
+
+
+class TimedCrowdsaleImpl is TimedCrowdsale {
 
   constructor (
     uint256 _openingTime,

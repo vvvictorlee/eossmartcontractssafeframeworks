@@ -1,7 +1,7 @@
-pragma solidity ^0.4.24;
 
 
-contract MessageHelper {
+
+class MessageHelper {
 
   event Show(bytes32 b32, uint256 number, string text);
   event Buy(bytes32 b32, uint256 number, string text, uint256 value);

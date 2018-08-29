@@ -1,15 +1,15 @@
-pragma solidity ^0.4.24;
 
-import "../Crowdsale.sol";
-import "../../token/ERC20/MintableToken.sol";
+
+#include "../Crowdsale.hpp"
+#include "../../token/ERC20/MintableToken.hpp"
 
 
 /**
  * @title MintedCrowdsale
- * @dev Extension of Crowdsale contract whose tokens are minted in each purchase.
+ * @dev Extension of Crowdsale class whose tokens are minted in each purchase.
  * Token ownership should be transferred to MintedCrowdsale for minting.
  */
-contract MintedCrowdsale is Crowdsale {
+class MintedCrowdsale is Crowdsale {
 
   /**
    * @dev Overrides delivery by minting tokens upon purchase.

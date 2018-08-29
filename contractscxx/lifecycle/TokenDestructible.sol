@@ -1,21 +1,21 @@
-pragma solidity ^0.4.24;
 
-import "../ownership/Ownable.sol";
-import "../token/ERC20/ERC20Basic.sol";
+
+#include "../ownership/Ownable.hpp"
+#include "../token/ERC20/ERC20Basic.hpp"
 
 
 /**
  * @title TokenDestructible:
  * @author Remco Bloemen <remco@2π.com>
- * @dev Base contract that can be destroyed by owner. All funds in contract including
+ * @dev Base class that can be destroyed by owner. All funds in class including
  * listed tokens will be sent to the owner.
  */
-contract TokenDestructible is Ownable {
+class TokenDestructible is Ownable {
 
   constructor() public payable { }
 
   /**
-   * @notice Terminate contract and refund to owner
+   * @notice Terminate class and refund to owner
    * @param _tokens List of addresses of ERC20 or ERC20Basic token contracts to
    refund.
    * @notice The called token contracts could try to re-enter this contract. Only

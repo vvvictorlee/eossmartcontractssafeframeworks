@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
-
-import "../ReentrancyGuard.sol";
-import "./ReentrancyAttack.sol";
 
 
-contract ReentrancyMock is ReentrancyGuard {
+#include "../ReentrancyGuard.hpp"
+#include "./ReentrancyAttack.hpp"
+
+
+class ReentrancyMock is ReentrancyGuard {
 
   uint256 public counter;
 

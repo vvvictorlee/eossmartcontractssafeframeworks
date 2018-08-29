@@ -1,13 +1,13 @@
-pragma solidity ^0.4.24;
 
-import "./ERC721Basic.sol";
+
+#include "./ERC721Basic.hpp"
 
 
 /**
  * @title ERC-721 Non-Fungible Token Standard, optional enumeration extension
  * @dev See https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md
  */
-contract ERC721Enumerable is ERC721Basic {
+class ERC721Enumerable is ERC721Basic {
   function totalSupply() public view returns (uint256);
   function tokenOfOwnerByIndex(
     address _owner,
@@ -25,7 +25,7 @@ contract ERC721Enumerable is ERC721Basic {
  * @title ERC-721 Non-Fungible Token Standard, optional metadata extension
  * @dev See https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md
  */
-contract ERC721Metadata is ERC721Basic {
+class ERC721Metadata is ERC721Basic {
   function name() external view returns (string _name);
   function symbol() external view returns (string _symbol);
   function tokenURI(uint256 _tokenId) public view returns (string);
@@ -36,5 +36,5 @@ contract ERC721Metadata is ERC721Basic {
  * @title ERC-721 Non-Fungible Token Standard, full implementation interface
  * @dev See https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md
  */
-contract ERC721 is ERC721Basic, ERC721Enumerable, ERC721Metadata {
+class ERC721 is ERC721Basic, ERC721Enumerable, ERC721Metadata {
 }

@@ -1,6 +1,6 @@
-pragma solidity ^0.4.24;
 
-import "../token/ERC721/ERC721Token.sol";
+
+#include "../token/ERC721/ERC721Token.hpp"
 
 
 /**
@@ -8,7 +8,7 @@ import "../token/ERC721/ERC721Token.sol";
  * This mock just provides a public mint and burn functions for testing purposes,
  * and a public setter for metadata URI
  */
-contract ERC721TokenMock is ERC721Token {
+class ERC721TokenMock is ERC721Token {
   constructor(string name, string symbol) public
     ERC721Token(name, symbol)
   { }

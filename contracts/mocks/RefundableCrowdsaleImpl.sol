@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
-
-import "../token/ERC20/MintableToken.sol";
-import "../crowdsale/distribution/RefundableCrowdsale.sol";
 
 
-contract RefundableCrowdsaleImpl is RefundableCrowdsale {
+#include "../token/ERC20/MintableToken.hpp"
+#include "../crowdsale/distribution/RefundableCrowdsale.hpp"
+
+
+class RefundableCrowdsaleImpl is RefundableCrowdsale {
 
   constructor (
     uint256 _openingTime,

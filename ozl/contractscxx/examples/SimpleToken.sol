@@ -1,7 +1,7 @@
-pragma solidity ^0.4.24;
 
 
-import "../token/ERC20/StandardToken.sol";
+
+#include "../token/ERC20/StandardToken.hpp"
 
 
 /**
@@ -10,7 +10,7 @@ import "../token/ERC20/StandardToken.sol";
  * Note they can later distribute these tokens as they wish using `transfer` and other
  * `StandardToken` functions.
  */
-contract SimpleToken is StandardToken {
+class SimpleToken is StandardToken {
 
   string public constant name = "SimpleToken";
   string public constant symbol = "SIM";

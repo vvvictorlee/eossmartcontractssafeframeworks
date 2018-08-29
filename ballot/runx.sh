@@ -67,7 +67,7 @@ cleos create account eosio acc5 $KEY_PUB_1 $KEY_PUB_1
 
 cleos create account eosio accballot $KEY_PUB_2 $KEY_PUB_2
 
-cleos set contract accballot ../ballot -p accballot
+cleos set class accballot ../ballot -p accballot
 
 
 echo ""

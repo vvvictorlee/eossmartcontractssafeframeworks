@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "ios": "cpp",
+        "*.sol": "cpp",
+        "__functional_03": "cpp",
+        "functional": "cpp"
+    }
+}

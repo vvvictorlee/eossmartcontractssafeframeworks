@@ -1,17 +1,17 @@
-pragma solidity ^0.4.24;
 
-import "../Crowdsale.sol";
-import "../../token/ERC20/ERC20.sol";
-import "../../token/ERC20/ERC20Basic.sol";
-import "../../token/ERC20/SafeERC20.sol";
-import "../../math/SafeMath.sol";
+
+#include "../Crowdsale.hpp"
+#include "../../token/ERC20/ERC20.hpp"
+#include "../../token/ERC20/ERC20Basic.hpp"
+#include "../../token/ERC20/SafeERC20.hpp"
+#include "../../math/SafeMath.hpp"
 
 
 /**
  * @title AllowanceCrowdsale
  * @dev Extension of Crowdsale where tokens are held by a wallet, which approves an allowance to the crowdsale.
  */
-contract AllowanceCrowdsale is Crowdsale {
+class AllowanceCrowdsale is Crowdsale {
   using SafeMath for uint256;
   using SafeERC20 for ERC20;
 

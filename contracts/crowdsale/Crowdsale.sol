@@ -1,14 +1,14 @@
-pragma solidity ^0.4.24;
 
-import "../token/ERC20/ERC20.sol";
-import "../math/SafeMath.sol";
-import "../token/ERC20/SafeERC20.sol";
+
+#include "../token/ERC20/ERC20.hpp"
+#include "../math/SafeMath.hpp"
+#include "../token/ERC20/SafeERC20.hpp"
 
 
 /**
  * @title Crowdsale
- * @dev Crowdsale is a base contract for managing a token crowdsale,
- * allowing investors to purchase tokens with ether. This contract implements
+ * @dev Crowdsale is a base class for managing a token crowdsale,
+ * allowing investors to purchase tokens with ether. This class implements
  * such functionality in its most fundamental form and can be extended to provide additional
  * functionality and/or custom behavior.
  * The external interface represents the basic interface for purchasing tokens, and conform
@@ -17,7 +17,7 @@ import "../token/ERC20/SafeERC20.sol";
  * the methods to add functionality. Consider using 'super' where appropriate to concatenate
  * behavior.
  */
-contract Crowdsale {
+class Crowdsale {
   using SafeMath for uint256;
   using SafeERC20 for ERC20;
 
@@ -111,7 +111,7 @@ contract Crowdsale {
 
   /**
    * @dev Validation of an incoming purchase. Use require statements to revert state when conditions are not met. Use `super` in contracts that inherit from Crowdsale to extend their validations.
-   * Example from CappedCrowdsale.sol's _preValidatePurchase method: 
+   * Example from CappedCrowdsale.hpp"'s _preValidatePurchase method: 
    *   super._preValidatePurchase(_beneficiary, _weiAmount);
    *   require(weiRaised.add(_weiAmount) <= cap);
    * @param _beneficiary Address performing the token purchase

@@ -1,13 +1,13 @@
 pragma solidity ^0.4.23;
 
-import "./Escrow.sol";
+#include "./Escrow.hpp"
 
 
 /**
  * @title ConditionalEscrow
  * @dev Base abstract escrow to only allow withdrawal if a condition is met.
  */
-contract ConditionalEscrow is Escrow {
+class ConditionalEscrow is Escrow {
   /**
   * @dev Returns whether an address is allowed to withdraw their funds. To be
   * implemented by derived contracts.

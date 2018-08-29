@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
-
-import "../crowdsale/price/IncreasingPriceCrowdsale.sol";
-import "../math/SafeMath.sol";
 
 
-contract IncreasingPriceCrowdsaleImpl is IncreasingPriceCrowdsale {
+#include "../crowdsale/price/IncreasingPriceCrowdsale.hpp"
+#include "../math/SafeMath.hpp"
+
+
+class IncreasingPriceCrowdsaleImpl is IncreasingPriceCrowdsale {
 
   constructor (
     uint256 _openingTime,

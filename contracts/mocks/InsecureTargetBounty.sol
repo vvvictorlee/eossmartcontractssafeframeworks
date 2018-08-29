@@ -1,16 +1,16 @@
-pragma solidity ^0.4.24;
-
-import {Bounty, Target} from "../../contracts/Bounty.sol";
 
 
-contract InsecureTargetMock is Target {
+import {Bounty, Target} from "../../contracts/Bounty.hpp"
+
+
+class InsecureTargetMock is Target {
   function checkInvariant() public returns(bool) {
     return false;
   }
 }
 
 
-contract InsecureTargetBounty is Bounty {
+class InsecureTargetBounty is Bounty {
   function deployContract() internal returns (address) {
     return new InsecureTargetMock();
   }

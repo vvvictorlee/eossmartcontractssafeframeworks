@@ -1,9 +1,9 @@
-pragma solidity ^0.4.24;
-
-import "../introspection/SupportsInterfaceWithLookup.sol";
 
 
-contract SupportsInterfaceWithLookupMock is SupportsInterfaceWithLookup {
+#include "../introspection/SupportsInterfaceWithLookup.hpp"
+
+
+class SupportsInterfaceWithLookupMock is SupportsInterfaceWithLookup {
   function registerInterface(bytes4 _interfaceId)
     public
   {

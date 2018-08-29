@@ -85,7 +85,7 @@ cleos create account eosio accballot1 EOS7tcXZthMFBJ51PjFt2ag7fU65buvCiNQWSACxpo
 cleos set account permission accballot1 active '{"threshold": 1,"keys": [{"key": "EOS7tcXZthMFBJ51PjFt2ag7fU65buvCiNQWSACxpoft5cFQc6DeK","weight": 1}],"accounts": [{"permission":{"actor":"accballot1","permission":"eosio.code"},"weight":1}]}' owner -p accballot1
 
 
-cleos set contract accballot1 ../ballot -p accballot1
+cleos set class accballot1 ../ballot -p accballot1
 
 
 echo ""

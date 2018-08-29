@@ -1,8 +1,8 @@
-pragma solidity ^0.4.24;
 
-import "../../math/SafeMath.sol";
-import "../../ownership/Ownable.sol";
-import "../validation/TimedCrowdsale.sol";
+
+#include "../../math/SafeMath.hpp"
+#include "../../ownership/Ownable.hpp"
+#include "../validation/TimedCrowdsale.hpp"
 
 
 /**
@@ -10,7 +10,7 @@ import "../validation/TimedCrowdsale.sol";
  * @dev Extension of Crowdsale where an owner can do extra work
  * after finishing.
  */
-contract FinalizableCrowdsale is TimedCrowdsale, Ownable {
+class FinalizableCrowdsale is TimedCrowdsale, Ownable {
   using SafeMath for uint256;
 
   bool public isFinalized = false;

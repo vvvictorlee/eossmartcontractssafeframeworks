@@ -1,8 +1,8 @@
-pragma solidity ^0.4.24;
-
-import "../lifecycle/Destructible.sol";
 
 
-contract DestructibleMock is Destructible {
+#include "../lifecycle/Destructible.hpp"
+
+
+class DestructibleMock is Destructible {
   function() public payable {}
 }

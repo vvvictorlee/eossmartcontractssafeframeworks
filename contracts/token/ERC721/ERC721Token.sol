@@ -1,8 +1,8 @@
-pragma solidity ^0.4.24;
 
-import "./ERC721.sol";
-import "./ERC721BasicToken.sol";
-import "../../introspection/SupportsInterfaceWithLookup.sol";
+
+#include "./ERC721.hpp"
+#include "./ERC721BasicToken.hpp"
+#include "../../introspection/SupportsInterfaceWithLookup.hpp"
 
 
 /**
@@ -11,7 +11,7 @@ import "../../introspection/SupportsInterfaceWithLookup.sol";
  * Moreover, it includes approve all functionality using operator terminology
  * @dev see https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md
  */
-contract ERC721Token is SupportsInterfaceWithLookup, ERC721BasicToken, ERC721 {
+class ERC721Token is SupportsInterfaceWithLookup, ERC721BasicToken, ERC721 {
 
   // Token name
   string internal name_;

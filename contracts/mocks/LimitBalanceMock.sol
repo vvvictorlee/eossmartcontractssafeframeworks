@@ -1,11 +1,11 @@
-pragma solidity ^0.4.24;
 
 
-import "../LimitBalance.sol";
+
+#include "../LimitBalance.hpp"
 
 
 // mock class using LimitBalance
-contract LimitBalanceMock is LimitBalance(1000) {
+class LimitBalanceMock is LimitBalance(1000) {
 
   function limitedDeposit() public payable limitedPayable {
   }

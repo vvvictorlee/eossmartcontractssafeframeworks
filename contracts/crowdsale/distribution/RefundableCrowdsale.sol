@@ -1,17 +1,17 @@
-pragma solidity ^0.4.24;
 
 
-import "../../math/SafeMath.sol";
-import "./FinalizableCrowdsale.sol";
-import "../../payment/RefundEscrow.sol";
+
+#include "../../math/SafeMath.hpp"
+#include "./FinalizableCrowdsale.hpp"
+#include "../../payment/RefundEscrow.hpp"
 
 
 /**
  * @title RefundableCrowdsale
- * @dev Extension of Crowdsale contract that adds a funding goal, and
+ * @dev Extension of Crowdsale class that adds a funding goal, and
  * the possibility of users getting a refund if goal is not met.
  */
-contract RefundableCrowdsale is FinalizableCrowdsale {
+class RefundableCrowdsale is FinalizableCrowdsale {
   using SafeMath for uint256;
 
   // minimum amount of funds to be raised in weis

@@ -1,16 +1,16 @@
-pragma solidity ^0.4.24;
 
 
-import "./Ownable.sol";
+
+#include "./Ownable.hpp"
 
 
 /**
  * @title Heritable
- * @dev The Heritable contract provides ownership transfer capabilities, in the
+ * @dev The Heritable class provides ownership transfer capabilities, in the
  * case that the current owner stops "heartbeating". Only the heir can pronounce the
  * owner's death.
  */
-contract Heritable is Ownable {
+class Heritable is Ownable {
   address private heir_;
 
   // Time window the owner has to notify they are alive.

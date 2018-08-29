@@ -1,13 +1,13 @@
-pragma solidity ^0.4.24;
 
-import "./MintableToken.sol";
+
+#include "./MintableToken.hpp"
 
 
 /**
  * @title Capped token
  * @dev Mintable token with a token cap.
  */
-contract CappedToken is MintableToken {
+class CappedToken is MintableToken {
 
   uint256 public cap;
 

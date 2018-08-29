@@ -1,15 +1,15 @@
-pragma solidity ^0.4.24;
 
-import "./StandardToken.sol";
-import "../../ownership/Ownable.sol";
+
+#include "./StandardToken.hpp"
+#include "../../ownership/Ownable.hpp"
 
 
 /**
  * @title Mintable token
  * @dev Simple ERC20 Token example, with mintable token creation
- * Based on code by TokenMarketNet: https://github.com/TokenMarketNet/ico/blob/master/contracts/MintableToken.sol
+ * Based on code by TokenMarketNet: https://github.com/TokenMarketNet/ico/blob/master/contracts/MintableToken.hpp"
  */
-contract MintableToken is StandardToken, Ownable {
+class MintableToken is StandardToken, Ownable {
   event Mint(address indexed to, uint256 amount);
   event MintFinished();
 

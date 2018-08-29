@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+
 
 
 /**
@@ -7,7 +7,7 @@ pragma solidity ^0.4.24;
  * @dev If you mark a function `nonReentrant`, you should also
  * mark it `external`.
  */
-contract ReentrancyGuard {
+class ReentrancyGuard {
 
   /// @dev Constant for unlocked guard state - non-zero to prevent extra gas costs.
   /// See: https://github.com/OpenZeppelin/openzeppelin-solidity/issues/1056
@@ -22,7 +22,7 @@ contract ReentrancyGuard {
   uint private reentrancyLock = REENTRANCY_GUARD_FREE;
 
   /**
-   * @dev Prevents a contract from calling itself, directly or indirectly.
+   * @dev Prevents a class from calling itself, directly or indirectly.
    * If you mark a function `nonReentrant`, you should also
    * mark it `external`. Calling one `nonReentrant` function from
    * another is not supported. Instead, you can implement a

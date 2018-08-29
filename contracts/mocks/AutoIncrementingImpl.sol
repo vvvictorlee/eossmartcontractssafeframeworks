@@ -1,9 +1,9 @@
-pragma solidity ^0.4.24;
-
-import "../AutoIncrementing.sol";
 
 
-contract AutoIncrementingImpl {
+#include "../AutoIncrementing.hpp"
+
+
+class AutoIncrementingImpl {
   using AutoIncrementing for AutoIncrementing.Counter;
 
   uint256 public theId;

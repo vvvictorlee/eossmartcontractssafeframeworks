@@ -44,15 +44,15 @@ The following provides visibility into how OpenZeppelin's contracts are organize
 access - Smart contracts that enable functionality that can be used for selective restrictions and basic authorization control functions. Includes address whitelisting and signature-based permissions management.
 
 rbac - A library used to manage addresses assigned to different user roles and an example Role-Based Access Control (RBAC) interface that demonstrates how to handle setters and getters for roles and addresses.
-crowdsale - A collection of smart contracts used to manage token crowdsales that allow investors to purchase tokens with ETH. Includes a base contract which implements fundamental crowdsale functionality in its simplest form. The base contract can be extended in order to satisfy your crowdsale’s specific requirements.
+crowdsale - A collection of smart contracts used to manage token crowdsales that allow investors to purchase tokens with ETH. Includes a base class which implements fundamental crowdsale functionality in its simplest form. The base class can be extended in order to satisfy your crowdsale’s specific requirements.
 
-distribution - Includes extensions of the base crowdsale contract which can be used to customize the completion of a crowdsale.
-emission - Includes extensions of the base crowdsale contract which can be used to mint and manage how tokens are issued to purchasers.
-price - Includes extensions of the crowdsale contract that can be used to manage changes in token prices.
-validation - Includes extensions of the crowdsale contract that can be used to enforce restraints and limit access to token purchases.
+distribution - Includes extensions of the base crowdsale class which can be used to customize the completion of a crowdsale.
+emission - Includes extensions of the base crowdsale class which can be used to mint and manage how tokens are issued to purchasers.
+price - Includes extensions of the crowdsale class that can be used to manage changes in token prices.
+validation - Includes extensions of the crowdsale class that can be used to enforce restraints and limit access to token purchases.
 examples - A collection of simple smart contracts that demonstrate how to add new features to base contracts through multiple inheritance.
 
-introspection - An interface that can be used to make a contract comply with the ERC-165 standard as well as a contract that implements ERC-165 using a lookup table.
+introspection - An interface that can be used to make a class comply with the ERC-165 standard as well as a class that implements ERC-165 using a lookup table.
 
 lifecycle - A collection of base contracts used to manage the existence and behavior of your contracts and their funds.
 
@@ -60,7 +60,7 @@ math - Libraries with safety checks on operations that throw on errors.
 
 mocks - A collection of abstract contracts that are primarily used for unit testing. They also serve as good usage examples and demonstrate how to combine contracts with inheritence when developing your own custom applications.
 
-ownership - A collection of smart contracts that can be used to manage contract and token ownership
+ownership - A collection of smart contracts that can be used to manage class and token ownership
 
 payment - A collection of smart contracts that can be used to manage payments through escrow arrangements, withdrawals, and claims. Includes support for both single payees and multiple payees.
 
@@ -77,139 +77,139 @@ Implementations - Includes ERC-721 token implementations that include all requir
 
 
 |____mocks
-| |____SafeMathMock.sol
-| |____SupportsInterfaceWithLookupMock.sol
-| |____MintedCrowdsaleImpl.sol
-| |____SecureTargetBounty.sol
-| |____ReentrancyAttack.sol
-| |____CappedCrowdsaleImpl.sol
-| |____BouncerMock.sol
-| |____IncreasingPriceCrowdsaleImpl.sol
-| |____TimedCrowdsaleImpl.sol
-| |____MessageHelper.sol
-| |____PausableTokenMock.sol
-| |____ReentrancyMock.sol
-| |____ERC721TokenMock.sol
-| |____LimitBalanceMock.sol
-| |____MerkleProofWrapper.sol
-| |____PullPaymentMock.sol
-| |____PostDeliveryCrowdsaleImpl.sol
-| |____BurnableTokenMock.sol
-| |____BasicTokenMock.sol
-| |____StandardTokenMock.sol
-| |____AllowanceCrowdsaleImpl.sol
-| |____HasNoEtherTest.sol
-| |____InsecureTargetBounty.sol
-| |____IndividuallyCappedCrowdsaleImpl.sol
-| |____ConditionalEscrowMock.sol
-| |____WhitelistMock.sol
-| |____ECRecoveryMock.sol
-| |____DetailedERC20Mock.sol
-| |____RBACCappedTokenMock.sol
-| |____RBACMock.sol
-| |____RefundableCrowdsaleImpl.sol
-| |____AutoIncrementingImpl.sol
-| |____ERC20WithMetadataMock.sol
-| |____ERC721BasicTokenMock.sol
-| |____StandardBurnableTokenMock.sol
-| |____ERC223TokenMock.sol
-| |____DestructibleMock.sol
-| |____ForceEther.sol
-| |____PausableMock.sol
-| |____SafeERC20Helper.sol
-| |____FinalizableCrowdsaleImpl.sol
-| |____WhitelistedCrowdsaleImpl.sol
-| |____ERC721ReceiverMock.sol
-| |____MathMock.sol
+| |____SafeMathMock.hpp"
+| |____SupportsInterfaceWithLookupMock.hpp"
+| |____MintedCrowdsaleImpl.hpp"
+| |____SecureTargetBounty.hpp"
+| |____ReentrancyAttack.hpp"
+| |____CappedCrowdsaleImpl.hpp"
+| |____BouncerMock.hpp"
+| |____IncreasingPriceCrowdsaleImpl.hpp"
+| |____TimedCrowdsaleImpl.hpp"
+| |____MessageHelper.hpp"
+| |____PausableTokenMock.hpp"
+| |____ReentrancyMock.hpp"
+| |____ERC721TokenMock.hpp"
+| |____LimitBalanceMock.hpp"
+| |____MerkleProofWrapper.hpp"
+| |____PullPaymentMock.hpp"
+| |____PostDeliveryCrowdsaleImpl.hpp"
+| |____BurnableTokenMock.hpp"
+| |____BasicTokenMock.hpp"
+| |____StandardTokenMock.hpp"
+| |____AllowanceCrowdsaleImpl.hpp"
+| |____HasNoEtherTest.hpp"
+| |____InsecureTargetBounty.hpp"
+| |____IndividuallyCappedCrowdsaleImpl.hpp"
+| |____ConditionalEscrowMock.hpp"
+| |____WhitelistMock.hpp"
+| |____ECRecoveryMock.hpp"
+| |____DetailedERC20Mock.hpp"
+| |____RBACCappedTokenMock.hpp"
+| |____RBACMock.hpp"
+| |____RefundableCrowdsaleImpl.hpp"
+| |____AutoIncrementingImpl.hpp"
+| |____ERC20WithMetadataMock.hpp"
+| |____ERC721BasicTokenMock.hpp"
+| |____StandardBurnableTokenMock.hpp"
+| |____ERC223TokenMock.hpp"
+| |____DestructibleMock.hpp"
+| |____ForceEther.hpp"
+| |____PausableMock.hpp"
+| |____SafeERC20Helper.hpp"
+| |____FinalizableCrowdsaleImpl.hpp"
+| |____WhitelistedCrowdsaleImpl.hpp"
+| |____ERC721ReceiverMock.hpp"
+| |____MathMock.hpp"
 |____token
 | |____ERC20
-| | |____StandardToken.sol
-| | |____StandardBurnableToken.sol
-| | |____TokenTimelock.sol
-| | |____ERC20.sol
-| | |____SafeERC20.sol
-| | |____TokenVesting.sol
-| | |____PausableToken.sol
-| | |____ERC20Basic.sol
-| | |____BurnableToken.sol
-| | |____BasicToken.sol
-| | |____RBACMintableToken.sol
-| | |____MintableToken.sol
-| | |____CappedToken.sol
-| | |____DetailedERC20.sol
+| | |____StandardToken.hpp"
+| | |____StandardBurnableToken.hpp"
+| | |____TokenTimelock.hpp"
+| | |____ERC20.hpp"
+| | |____SafeERC20.hpp"
+| | |____TokenVesting.hpp"
+| | |____PausableToken.hpp"
+| | |____ERC20Basic.hpp"
+| | |____BurnableToken.hpp"
+| | |____BasicToken.hpp"
+| | |____RBACMintableToken.hpp"
+| | |____MintableToken.hpp"
+| | |____CappedToken.hpp"
+| | |____DetailedERC20.hpp"
 | |____ERC721
-| | |____ERC721Receiver.sol
-| | |____ERC721Token.sol
-| | |____ERC721.sol
-| | |____ERC721BasicToken.sol
-| | |____ERC721Holder.sol
-| | |____DeprecatedERC721.sol
-| | |____ERC721Basic.sol
-|____ReentrancyGuard.sol
+| | |____ERC721Receiver.hpp"
+| | |____ERC721Token.hpp"
+| | |____ERC721.hpp"
+| | |____ERC721BasicToken.hpp"
+| | |____ERC721Holder.hpp"
+| | |____DeprecatedERC721.hpp"
+| | |____ERC721Basic.hpp"
+|____ReentrancyGuard.hpp"
 |____access
 | |____rbac
-| | |____Roles.sol
-| | |____RBAC.sol
-| |____Whitelist.sol
-| |____SignatureBouncer.sol
+| | |____Roles.hpp"
+| | |____RBAC.hpp"
+| |____Whitelist.hpp"
+| |____SignatureBouncer.hpp"
 |____payment
-| |____PullPayment.sol
-| |____SplitPayment.sol
-| |____Escrow.sol
-| |____RefundEscrow.sol
-| |____ConditionalEscrow.sol
+| |____PullPayment.hpp"
+| |____SplitPayment.hpp"
+| |____Escrow.hpp"
+| |____RefundEscrow.hpp"
+| |____ConditionalEscrow.hpp"
 |____lifecycle
-| |____Pausable.sol
-| |____Destructible.sol
-| |____TokenDestructible.sol
+| |____Pausable.hpp"
+| |____Destructible.hpp"
+| |____TokenDestructible.hpp"
 |____crowdsale
 | |____emission
-| | |____MintedCrowdsale.sol
-| | |____AllowanceCrowdsale.sol
+| | |____MintedCrowdsale.hpp"
+| | |____AllowanceCrowdsale.hpp"
 | |____distribution
-| | |____RefundableCrowdsale.sol
-| | |____PostDeliveryCrowdsale.sol
-| | |____FinalizableCrowdsale.sol
+| | |____RefundableCrowdsale.hpp"
+| | |____PostDeliveryCrowdsale.hpp"
+| | |____FinalizableCrowdsale.hpp"
 | |____price
-| | |____IncreasingPriceCrowdsale.sol
-| |____Crowdsale.sol
+| | |____IncreasingPriceCrowdsale.hpp"
+| |____Crowdsale.hpp"
 | |____validation
-| | |____IndividuallyCappedCrowdsale.sol
-| | |____TimedCrowdsale.sol
-| | |____WhitelistedCrowdsale.sol
-| | |____CappedCrowdsale.sol
+| | |____IndividuallyCappedCrowdsale.hpp"
+| | |____TimedCrowdsale.hpp"
+| | |____WhitelistedCrowdsale.hpp"
+| | |____CappedCrowdsale.hpp"
 |____introspection
-| |____SupportsInterfaceWithLookup.sol
-| |____ERC165.sol
-|____Bounty.sol
+| |____SupportsInterfaceWithLookup.hpp"
+| |____ERC165.hpp"
+|____Bounty.hpp"
 |____math
-| |____SafeMath.sol
-| |____Math.sol
+| |____SafeMath.hpp"
+| |____Math.hpp"
 |____ownership
-| |____HasNoEther.sol
-| |____Claimable.sol
-| |____HasNoTokens.sol
-| |____NoOwner.sol
-| |____Contactable.sol
-| |____Ownable.sol
-| |____DelayedClaimable.sol
-| |____Heritable.sol
-| |____CanReclaimToken.sol
-| |____Superuser.sol
-| |____HasNoContracts.sol
-|____ECRecovery.sol
-|____LimitBalance.sol
+| |____HasNoEther.hpp"
+| |____Claimable.hpp"
+| |____HasNoTokens.hpp"
+| |____NoOwner.hpp"
+| |____Contactable.hpp"
+| |____Ownable.hpp"
+| |____DelayedClaimable.hpp"
+| |____Heritable.hpp"
+| |____CanReclaimToken.hpp"
+| |____Superuser.hpp"
+| |____HasNoContracts.hpp"
+|____ECRecovery.hpp"
+|____LimitBalance.hpp"
 |____examples
-| |____SampleCrowdsale.sol
-| |____RBACWithAdmin.sol
-| |____SimpleSavingsWallet.sol
-| |____SimpleToken.sol
-|____MerkleProof.sol
-|____AutoIncrementing.sol
-|____AddressUtils.sol
+| |____SampleCrowdsale.hpp"
+| |____RBACWithAdmin.hpp"
+| |____SimpleSavingsWallet.hpp"
+| |____SimpleToken.hpp"
+|____MerkleProof.hpp"
+|____AutoIncrementing.hpp"
+|____AddressUtils.hpp"
 |____proposals
 | |____ERC1046
-| | |____TokenMetadata.sol
+| | |____TokenMetadata.hpp"
 
 
 
@@ -220,7 +220,7 @@ balanceOf 查询指定address的余额
 transfer 发送指定数目的token到指定账户，同时发送后需要触发Transfer事件
 Transfer事件,任何token发送发生时，必须触发该事件，即使是0额度。 当一个token合约创建时，应该触发一个Transfer事件，token的发送方是0x0，也就是说凭空而来的token，简称空气币。
 
-ERC20.sol
+ERC20.hpp"
 
 ERC20合约继承了ERC20Basic，另外定义了approve相关的方法:
 
@@ -229,52 +229,52 @@ transferFrom 从一个地址向另外一个地址转账指定额度的token，�
 approve 批准额度，允许一个账户最多能从你的账户你取现指定额度。重复调用时，以最后一次的额度为主。为了防止攻击，最开始这个额度必须设置为0。
 Approval事件，当approve被调用时，需要触发该事件。
 
-DetailedERC20.sol
+DetailedERC20.hpp"
 
 DetailedERC20 主要定义了token的展示信息:
 
 name token的名称,比如"XXXToken"
 symbol token的符号,比如"XXX"
 decimals token精确的小数点位数，比如18
-BasicToken.sol
+BasicToken.hpp"
 
 通过SafeMath来做运算很重要，在我们自己写合约的时候也尽量使用，可以避免一些计算过程的溢出等安全问题。
 
-StandardToken.sol
+StandardToken.hpp"
 
 上面合约定义的 mapping allowed，它用来记录某个地址允许另外一个地址动用多少token。假设钱包地址为B，有另外一个合约其合约地址为C，合约C会通过支付XXX Token来做一些事情，根据ERC20的定义，每个地址只能操作属于自己的Token，则合约C无法直接使用B地址所拥有的Token，这时候allowed Mapping就派上用场了，它上面可以记录一个允许操作值，像是「B 钱包地址允许 C 合约地址动用属于 B 钱包地址的 1000 XXX Token」，以 Mapping 的结构来说标记为「B => C => 1000」
 
-BurnableToken.sol
+BurnableToken.hpp"
 
 该合约比较简单，就是调用者可以销毁一定数量的token，然后totalSupply减去对应销毁的数量
 
-StandardBurnableToken.sol
+StandardBurnableToken.hpp"
 
-MintableToken.sol
+MintableToken.hpp"
 
 
 增发token的合约也很简单，就是通过增发一定量的token给对应的address，并给总发行量增加对应的增发token，可以通过调用finishMinting来完成增发。
 
-CappedToken.sol
+CappedToken.hpp"
 
 CappedToken 也很简单，就是在可增发合约上加了一个"cap"，来限制增发的上限
 
-RBACMintableToken.sol
+RBACMintableToken.hpp"
 
 RBACMintableToken 合约将增发操作中添加了RBAC逻辑，就是角色权限管理的逻辑，将一个地址这是为增发者角色，也可以移除一个地址的增发者角色，只有拥有"minter"角色的address才有权限增发token
 
-SafeERC20.sol
+SafeERC20.hpp"
 
 SafeERC20 是一个ERC20的安全操作库，在下面的TokenTimelock锁定期后释放token的合约中我们可以看到用法
 
-TokenTimelock.sol
+TokenTimelock.hpp"
 
 TokenTimelock 合约通过初始化受益人以及释放的时间和锁定的token，通过release来将锁定期过后释放的token转给受益人
 
-TokenVesting.sol
+TokenVesting.hpp"
 
 TokenVesting也是锁仓的一种方式，主要解决的是有断崖时间和持续锁仓时间的锁仓场景
 
-PausableToken.sol
+PausableToken.hpp"
 
 PausableToken继承了StandardToken，但是在方法中都添加了whenNotPaused函数修改器，whenNotPaused继承自Pausable合约，Pausable有个paused来标记暂停的状态，从而控制合约的是否暂停。

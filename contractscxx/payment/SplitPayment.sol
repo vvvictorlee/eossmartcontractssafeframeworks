@@ -1,14 +1,14 @@
-pragma solidity ^0.4.24;
 
-import "../math/SafeMath.sol";
+
+#include "../math/SafeMath.hpp"
 
 
 /**
  * @title SplitPayment
- * @dev Base contract that supports multiple payees claiming funds sent to this contract
+ * @dev Base class that supports multiple payees claiming funds sent to this contract
  * according to the proportion they own.
  */
-contract SplitPayment {
+class SplitPayment {
   using SafeMath for uint256;
 
   uint256 public totalShares = 0;

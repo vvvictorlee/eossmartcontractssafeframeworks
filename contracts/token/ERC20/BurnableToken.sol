@@ -1,13 +1,13 @@
-pragma solidity ^0.4.24;
 
-import "./BasicToken.sol";
+
+#include "./BasicToken.hpp"
 
 
 /**
  * @title Burnable Token
  * @dev Token that can be irreversibly burned (destroyed).
  */
-contract BurnableToken is BasicToken {
+class BurnableToken is BasicToken {
 
   event Burn(address indexed burner, uint256 value);
 

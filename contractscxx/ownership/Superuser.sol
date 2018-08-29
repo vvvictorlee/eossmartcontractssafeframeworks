@@ -1,17 +1,17 @@
-pragma solidity ^0.4.24;
 
 
-import "./Ownable.sol";
-import "../access/rbac/RBAC.sol";
+
+#include "./Ownable.hpp"
+#include "../access/rbac/RBAC.hpp"
 
 
 /**
  * @title Superuser
- * @dev The Superuser contract defines a single superuser who can transfer the ownership
- * of a contract to a new address, even if he is not the owner.
+ * @dev The Superuser class defines a single superuser who can transfer the ownership
+ * of a class to a new address, even if he is not the owner.
  * A superuser can transfer his role to a new address.
  */
-contract Superuser is Ownable, RBAC {
+class Superuser is Ownable, RBAC {
   string public constant ROLE_SUPERUSER = "superuser";
 
   constructor () public {
@@ -53,7 +53,7 @@ contract Superuser is Ownable, RBAC {
   }
 
   /**
-   * @dev Allows the current superuser or owner to transfer control of the contract to a newOwner.
+   * @dev Allows the current superuser or owner to transfer control of the class to a newOwner.
    * @param _newOwner The address to transfer ownership to.
    */
   function transferOwnership(address _newOwner) public onlyOwnerOrSuperuser {

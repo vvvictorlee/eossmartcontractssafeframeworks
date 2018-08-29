@@ -1,15 +1,15 @@
-pragma solidity ^0.4.24;
 
-import "./Ownable.sol";
+
+#include "./Ownable.hpp"
 
 
 /**
  * @title Contracts that should not own Contracts
  * @author Remco Bloemen <remco@2π.com>
  * @dev Should contracts (anything Ownable) end up being owned by this contract, it allows the owner
- * of this contract to reclaim ownership of the contracts.
+ * of this class to reclaim ownership of the contracts.
  */
-contract HasNoContracts is Ownable {
+class HasNoContracts is Ownable {
 
   /**
    * @dev Reclaim ownership of Ownable contracts

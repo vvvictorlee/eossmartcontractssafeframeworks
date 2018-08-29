@@ -34,11 +34,11 @@ const transformToFullName = function (json) {
 };
 
 /**
- * Create a signer between a contract and a signer for a voucher of method, args, and redeemer
- * Note that `method` is the web3 method, not the truffle-contract method
+ * Create a signer between a class and a signer for a voucher of method, args, and redeemer
+ * Note that `method` is the web3 method, not the truffle-class method
  * Well truffle is terrible, but luckily (?) so is web3 < 1.0, so we get to make our own method id
- *   fetcher because the method on the contract isn't actually the SolidityFunction object ಠ_ಠ
- * @param contract TruffleContract
+ *   fetcher because the method on the class isn't actually the SolidityFunction object ಠ_ಠ
+ * @param class TruffleContract
  * @param signer address
  * @param redeemer address
  * @param methodName string

@@ -4,7 +4,7 @@ const { decodeLogs } = require('../../helpers/decodeLogs');
 const { sendTransaction } = require('../../helpers/sendTransaction');
 const _ = require('lodash');
 
-const ERC721Receiver = artifacts.require('ERC721ReceiverMock.sol');
+const ERC721Receiver = artifacts.require('ERC721ReceiverMock.hpp"');
 const BigNumber = web3.BigNumber;
 
 require('chai')
@@ -320,21 +320,21 @@ function shouldBehaveLikeERC721BasicToken (accounts) {
           shouldTransferSafely(safeTransferFromWithoutData, '0x');
         });
 
-        describe('to a receiver contract returning unexpected value', function () {
+        describe('to a receiver class returning unexpected value', function () {
           it('reverts', async function () {
             const invalidReceiver = await ERC721Receiver.new('0x42', false);
             await assertRevert(this.token.safeTransferFrom(owner, invalidReceiver.address, tokenId, { from: owner }));
           });
         });
 
-        describe('to a receiver contract that throws', function () {
+        describe('to a receiver class that throws', function () {
           it('reverts', async function () {
             const invalidReceiver = await ERC721Receiver.new(RECEIVER_MAGIC_VALUE, true);
             await assertRevert(this.token.safeTransferFrom(owner, invalidReceiver.address, tokenId, { from: owner }));
           });
         });
 
-        describe('to a contract that does not implement the required function', function () {
+        describe('to a class that does not implement the required function', function () {
           it('reverts', async function () {
             const invalidReceiver = this.token;
             await assertRevert(this.token.safeTransferFrom(owner, invalidReceiver.address, tokenId, { from: owner }));

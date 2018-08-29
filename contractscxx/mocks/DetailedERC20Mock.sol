@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
-
-import "../token/ERC20/StandardToken.sol";
-import "../token/ERC20/DetailedERC20.sol";
 
 
-contract DetailedERC20Mock is StandardToken, DetailedERC20 {
+#include "../token/ERC20/StandardToken.hpp"
+#include "../token/ERC20/DetailedERC20.hpp"
+
+
+class DetailedERC20Mock is StandardToken, DetailedERC20 {
   constructor(
     string _name,
     string _symbol,

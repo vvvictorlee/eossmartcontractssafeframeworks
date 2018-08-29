@@ -1,10 +1,10 @@
-pragma solidity ^0.4.24;
-
-import "../token/ERC20/ERC20.sol";
-import "../crowdsale/distribution/PostDeliveryCrowdsale.sol";
 
 
-contract PostDeliveryCrowdsaleImpl is PostDeliveryCrowdsale {
+#include "../token/ERC20/ERC20.hpp"
+#include "../crowdsale/distribution/PostDeliveryCrowdsale.hpp"
+
+
+class PostDeliveryCrowdsaleImpl is PostDeliveryCrowdsale {
 
   constructor (
     uint256 _openingTime,

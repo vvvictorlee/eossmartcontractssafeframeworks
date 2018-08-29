@@ -1,15 +1,15 @@
-pragma solidity ^0.4.24;
 
-import "../validation/TimedCrowdsale.sol";
-import "../../token/ERC20/ERC20.sol";
-import "../../math/SafeMath.sol";
+
+#include "../validation/TimedCrowdsale.hpp"
+#include "../../token/ERC20/ERC20.hpp"
+#include "../../math/SafeMath.hpp"
 
 
 /**
  * @title PostDeliveryCrowdsale
  * @dev Crowdsale that locks tokens from withdrawal until it ends.
  */
-contract PostDeliveryCrowdsale is TimedCrowdsale {
+class PostDeliveryCrowdsale is TimedCrowdsale {
   using SafeMath for uint256;
 
   mapping(address => uint256) public balances;

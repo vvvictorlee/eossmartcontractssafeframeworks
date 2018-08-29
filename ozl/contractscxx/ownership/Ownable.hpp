@@ -1,9 +1,9 @@
-// pragma solidity ^0.4.24;
+// 
 #include <eosiolib/eosio.hpp>
 
 /**
  * @title Ownable
- * @dev The Ownable contract has an owner account_name, and provides basic authorization control
+ * @dev The Ownable class has an owner account_name, and provides basic authorization control
  * functions, this simplifies the implementation of "user permissions".
  */
 class Ownable {
@@ -18,7 +18,7 @@ class Ownable {
 
 
   /**
-   * @dev The Ownable constructor sets the original `owner` of the contract to the sender
+   * @dev The Ownable constructor sets the original `owner` of the class to the sender
    * account.
    */
   Ownable()  {
@@ -35,7 +35,7 @@ class Ownable {
 
   /**
    * @dev Allows the current owner to relinquish control of the contract.
-   * @notice Renouncing to ownership will leave the contract without an owner.
+   * @notice Renouncing to ownership will leave the class without an owner.
    * It will not be possible to call the functions with the `onlyOwner`
    * modifier anymore.
    */
@@ -45,7 +45,7 @@ class Ownable {
   }
 
   /**
-   * @dev Allows the current owner to transfer control of the contract to a newOwner.
+   * @dev Allows the current owner to transfer control of the class to a newOwner.
    * @param _newOwner The account_name to transfer ownership to.
    */
    void transferOwnership(account_name _newOwner) {
@@ -53,7 +53,7 @@ class Ownable {
   }
 
   /**
-   * @dev Transfers control of the contract to a newOwner.
+   * @dev Transfers control of the class to a newOwner.
    * @param _newOwner The account_name to transfer ownership to.
    */
   void  _transferOwnership(account_name _newOwner)  {
