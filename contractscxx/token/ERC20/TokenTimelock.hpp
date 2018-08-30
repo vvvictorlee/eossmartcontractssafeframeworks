@@ -1,6 +1,6 @@
 #include <eosiolib/eosio.hpp>
 
-#include "./SafeERC20.hpp";
+#include "./SafeERC20.hpp"
 
 
 /**

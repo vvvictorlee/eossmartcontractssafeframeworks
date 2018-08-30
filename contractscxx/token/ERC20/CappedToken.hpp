@@ -1,6 +1,6 @@
 // 
 
-#include "./MintableToken.hpp";
+#include "./MintableToken.hpp"
 
 
 /**

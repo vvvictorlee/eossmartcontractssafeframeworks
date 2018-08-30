@@ -1,6 +1,6 @@
 #include <eosiolib/eosio.hpp>
 
-#include "./ERC721Basic.hpp";
+#include "./ERC721Basic.hpp"
 
 
 /**

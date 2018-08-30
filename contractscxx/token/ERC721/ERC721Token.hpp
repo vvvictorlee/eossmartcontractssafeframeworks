@@ -1,8 +1,8 @@
 #include <eosiolib/eosio.hpp>
 
-#include "./ERC721.hpp";
-#include "./ERC721BasicToken.hpp";
-#include "../../introspection/SupportsInterfaceWithLookup.hpp";
+#include "./ERC721.hpp"
+#include "./ERC721BasicToken.hpp"
+#include "../../introspection/SupportsInterfaceWithLookup.hpp"
 
 
 /**

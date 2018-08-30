@@ -1,7 +1,7 @@
 // 
 
-#include "../token/ERC20/ERC20.hpp";
-#include "../crowdsale/emission/AllowanceCrowdsale.hpp";
+#include "../token/ERC20/ERC20.hpp"
+#include "../crowdsale/emission/AllowanceCrowdsale.hpp"
 
 
 class AllowanceCrowdsaleImpl :public AllowanceCrowdsale {

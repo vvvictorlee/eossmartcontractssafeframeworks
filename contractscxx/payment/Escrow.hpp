@@ -1,7 +1,7 @@
 // pragma solidity ^0.4.23;
 
-#include "../math/SafeMath.hpp";
-#include "../ownership/Ownable.hpp";
+#include "../math/SafeMath.hpp"
+#include "../ownership/Ownable.hpp"
 
 
 /**

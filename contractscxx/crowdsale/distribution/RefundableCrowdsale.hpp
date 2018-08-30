@@ -1,9 +1,9 @@
 // 
 
 
-#include "../../math/SafeMath.hpp";
-#include "./FinalizableCrowdsale.hpp";
-#include "../../payment/RefundEscrow.hpp";
+#include "../../math/SafeMath.hpp"
+#include "./FinalizableCrowdsale.hpp"
+#include "../../payment/RefundEscrow.hpp"
 
 
 /**

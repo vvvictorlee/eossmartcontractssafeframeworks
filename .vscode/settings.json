@@ -3,6 +3,7 @@
         "ios": "cpp",
         "*.sol": "cpp",
         "__functional_03": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "locale": "cpp"
     }
 }

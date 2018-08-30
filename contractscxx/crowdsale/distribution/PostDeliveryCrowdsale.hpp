@@ -1,8 +1,8 @@
 // 
 
-#include "../validation/TimedCrowdsale.hpp";
-#include "../../token/ERC20/ERC20.hpp";
-#include "../../math/SafeMath.hpp";
+#include "../validation/TimedCrowdsale.hpp"
+#include "../../token/ERC20/ERC20.hpp"
+#include "../../math/SafeMath.hpp"
 
 
 /**

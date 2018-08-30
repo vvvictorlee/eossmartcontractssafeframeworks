@@ -1,6 +1,6 @@
 #include <eosiolib/eosio.hpp>
 
-#include "./ERC721Receiver.hpp";
+#include "./ERC721Receiver.hpp"
 
 
 class ERC721Holder : ERC721Receiver {

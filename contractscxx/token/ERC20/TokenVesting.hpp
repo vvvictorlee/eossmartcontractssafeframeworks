@@ -2,10 +2,10 @@
 
 #include <eosiolib/eosio.hpp>
 
-#include "./ERC20Basic.hpp";
-#include "./SafeERC20.hpp";
-#include "../../ownership/Ownable.hpp";
-#include "../../math/SafeMath.hpp";
+#include "./ERC20Basic.hpp"
+#include "./SafeERC20.hpp"
+#include "../../ownership/Ownable.hpp"
+#include "../../math/SafeMath.hpp"
 
 /**
  * @title TokenVesting

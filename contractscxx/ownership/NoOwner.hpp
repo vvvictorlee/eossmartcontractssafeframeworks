@@ -1,8 +1,8 @@
 // 
 
-#include "./HasNoEther.hpp";
-#include "./HasNoTokens.hpp";
-#include "./HasNoContracts.hpp";
+#include "./HasNoEther.hpp"
+#include "./HasNoTokens.hpp"
+#include "./HasNoContracts.hpp"
 
 
 /**

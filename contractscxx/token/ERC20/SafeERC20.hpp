@@ -1,7 +1,7 @@
 #include <eosiolib/eosio.hpp>
 
-#include "./ERC20Basic.hpp";
-#include "./ERC20.hpp";
+#include "./ERC20Basic.hpp"
+#include "./ERC20.hpp"
 
 
 /**

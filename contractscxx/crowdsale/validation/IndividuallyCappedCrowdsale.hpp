@@ -1,8 +1,8 @@
 // 
 
-#include "../../math/SafeMath.hpp";
-#include "../Crowdsale.hpp";
-#include "../../ownership/Ownable.hpp";
+#include "../../math/SafeMath.hpp"
+#include "../Crowdsale.hpp"
+#include "../../ownership/Ownable.hpp"
 
 
 /**

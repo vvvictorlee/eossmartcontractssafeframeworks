@@ -1,10 +1,10 @@
 // 
 
-#include "../Crowdsale.hpp";
-#include "../../token/ERC20/ERC20.hpp";
-#include "../../token/ERC20/ERC20Basic.hpp";
-#include "../../token/ERC20/SafeERC20.hpp";
-#include "../../math/SafeMath.hpp";
+#include "../Crowdsale.hpp"
+#include "../../token/ERC20/ERC20.hpp"
+#include "../../token/ERC20/ERC20Basic.hpp"
+#include "../../token/ERC20/SafeERC20.hpp"
+#include "../../math/SafeMath.hpp"
 
 
 /**

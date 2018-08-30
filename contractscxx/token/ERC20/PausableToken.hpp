@@ -1,7 +1,7 @@
 // 
 #include <eosiolib/eosio.hpp>
-#include "./StandardToken.hpp";
-#include "../../lifecycle/Pausable.hpp";
+#include "./StandardToken.hpp"
+#include "../../lifecycle/Pausable.hpp"
 
 
 /**

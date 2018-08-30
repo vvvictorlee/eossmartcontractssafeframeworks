@@ -1,8 +1,8 @@
 // 
 #include <eosiolib/asset.hpp>
 #include <eosiolib/eosio.hpp>
-#include "./StandardToken.hpp";
-#include "../../ownership/Ownable.hpp";
+#include "./StandardToken.hpp"
+#include "../../ownership/Ownable.hpp"
 
 
 /**

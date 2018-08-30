@@ -1,7 +1,7 @@
 // 
 
-#include "../ownership/Ownable.hpp";
-#include "../token/ERC20/ERC20Basic.hpp";
+#include "../ownership/Ownable.hpp"
+#include "../token/ERC20/ERC20Basic.hpp"
 
 
 /**

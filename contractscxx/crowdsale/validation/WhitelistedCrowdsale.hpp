@@ -1,7 +1,7 @@
 // 
 
-#include "../Crowdsale.hpp";
-#include "../../access/Whitelist.hpp";
+#include "../Crowdsale.hpp"
+#include "../../access/Whitelist.hpp"
 
 
 /**

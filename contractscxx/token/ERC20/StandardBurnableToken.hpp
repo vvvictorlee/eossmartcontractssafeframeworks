@@ -1,7 +1,7 @@
 #include <eosiolib/eosio.hpp>
 
-#include "./BurnableToken.hpp";
-#include "./StandardToken.hpp";
+#include "./BurnableToken.hpp"
+#include "./StandardToken.hpp"
 
 
 /**

@@ -1,7 +1,7 @@
 // 
 
-#include "../Crowdsale.hpp";
-#include "../../token/ERC20/MintableToken.hpp";
+#include "../Crowdsale.hpp"
+#include "../../token/ERC20/MintableToken.hpp"
 
 
 /**

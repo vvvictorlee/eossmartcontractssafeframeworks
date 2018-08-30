@@ -1,7 +1,7 @@
 // 
 
-#include "../../math/SafeMath.hpp";
-#include "../Crowdsale.hpp";
+#include "../../math/SafeMath.hpp"
+#include "../Crowdsale.hpp"
 
 
 /**

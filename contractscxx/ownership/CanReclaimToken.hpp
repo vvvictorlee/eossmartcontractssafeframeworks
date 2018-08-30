@@ -1,8 +1,8 @@
 // 
 
-#include "./Ownable.hpp";
-include "../token/ERC20/ERC20Basic.hpp";
-include "../token/ERC20/SafeERC20.hpp";
+#include "./Ownable.hpp"
+include "../token/ERC20/ERC20Basic.hpp"
+include "../token/ERC20/SafeERC20.hpp"
 
 
 /**

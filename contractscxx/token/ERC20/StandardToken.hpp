@@ -1,8 +1,8 @@
 // 
 #include <eosiolib/asset.hpp>
 #include <eosiolib/eosio.hpp>
-#include "./BasicToken.hpp";
-#include "./ERC20.hpp";
+#include "./BasicToken.hpp"
+#include "./ERC20.hpp"
 
 
 /**

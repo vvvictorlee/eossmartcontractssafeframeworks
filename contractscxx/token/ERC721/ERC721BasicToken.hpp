@@ -1,10 +1,10 @@
 #include <eosiolib/eosio.hpp>
 
-#include "./ERC721Basic.hpp";
-#include "./ERC721Receiver.hpp";
-#include "../../math/SafeMath.hpp";
-#include "../../AddressUtils.hpp";
-#include "../../introspection/SupportsInterfaceWithLookup.hpp";
+#include "./ERC721Basic.hpp"
+#include "./ERC721Receiver.hpp"
+#include "../../math/SafeMath.hpp"
+#include "../../AddressUtils.hpp"
+#include "../../introspection/SupportsInterfaceWithLookup.hpp"
 
 
 /**

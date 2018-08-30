@@ -1,7 +1,7 @@
 #include <eosiolib/eosio.hpp>
 
 
-#include "../ownership/Ownable.hpp";
+#include "../ownership/Ownable.hpp"
 
 
 /**

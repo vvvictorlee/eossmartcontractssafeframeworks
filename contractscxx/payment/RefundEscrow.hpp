@@ -1,7 +1,7 @@
 // pragma solidity ^0.4.23;
 
-#include "./ConditionalEscrow.hpp";
-#include "../ownership/Ownable.hpp";
+#include "./ConditionalEscrow.hpp"
+#include "../ownership/Ownable.hpp"
 
 
 /**

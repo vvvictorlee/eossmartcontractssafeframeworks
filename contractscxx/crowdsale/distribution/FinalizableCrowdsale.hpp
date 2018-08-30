@@ -1,8 +1,8 @@
 // 
 
-#include "../../math/SafeMath.hpp";
-#include "../../ownership/Ownable.hpp";
-#include "../validation/TimedCrowdsale.hpp";
+#include "../../math/SafeMath.hpp"
+#include "../../ownership/Ownable.hpp"
+#include "../validation/TimedCrowdsale.hpp"
 
 
 /**
@@ -10,23 +10,25 @@
  * @dev Extension of Crowdsale where an owner can do extra work
  * after finishing.
  */
-class FinalizableCrowdsale is TimedCrowdsale, Ownable {
-  using SafeMath for uint256_t;
+class FinalizableCrowdsale :public TimedCrowdsale, public Ownable {
+  // using SafeMath for uint256_t;
 
-  bool public isFinalized = false;
+  bool  isFinalized = false;
 
-  event Finalized();
+  // event Finalized();
 
   /**
    * @dev Must be called after crowdsale ends, to do some extra finalization
    * work. Calls the contract's finalization function.
    */
-  function finalize() public onlyOwner {
+  void finalize()
+  //  public onlyOwner 
+   {
     eosio_assert(!isFinalized);
     eosio_assert(hasClosed());
 
     finalization();
-    emit Finalized();
+    // emit Finalized();
 
     isFinalized = true;
   }
@@ -36,7 +38,7 @@ class FinalizableCrowdsale is TimedCrowdsale, Ownable {
    * should call super.finalization() to ensure the chain of finalization is
    * executed entirely.
    */
-  function finalization() internal {
+  void finalization()  {
   }
 
 }
