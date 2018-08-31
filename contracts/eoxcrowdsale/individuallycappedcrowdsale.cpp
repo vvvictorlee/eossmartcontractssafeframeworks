@@ -5,7 +5,7 @@
 
 
 
-/**
+/**eosiocpp  -g individuallycappedcrowdsale.abi individuallycappedcrowdsale.cpp
  * @title IndividuallyCappedCrowdsale
  * @dev Crowdsale with per-user caps.
  */
@@ -41,7 +41,12 @@
   void IndividuallyCappedCrowdsale::setUserCap(account_name _beneficiary, uint64_t _cap) 
   // external onlyOwner 
   {
-    caps[_beneficiary] = _cap;
+    // caps[_beneficiary] = _cap;
+    caps from_acnts(_self, _beneficiary);
+      auto iid = from_acnts.find(_beneficiary);
+      from_acnts.modify(iid, _self, [&](auto &a) {
+        a.balance = _cap;
+      });
   }
 
   /**
@@ -50,14 +55,15 @@
    * @param _cap Wei limit for individual contribution
    */
   void IndividuallyCappedCrowdsale::setGroupCap(
-    account_name[] _beneficiaries,
+    std::vector<account_name> _beneficiaries,
     uint64_t _cap
   )
     // external
     // onlyOwner
   {
-    for (uint64_t i = 0; i < _beneficiaries.length; i++) {
-      caps[_beneficiaries[i]] = _cap;
+    for (uint64_t i = 0; i < _beneficiaries.size(); i++) {
+      setUserCap(_beneficiaries[i],_cap);
+      // caps[_beneficiaries[i]] = _cap;
     }
   }
 
@@ -69,7 +75,11 @@
   uint64_t IndividuallyCappedCrowdsale::getUserCap(account_name _beneficiary) 
   // public view returns (uint64_t) 
   {
-    return caps[_beneficiary];
+     caps accountstable(_self, _beneficiary);
+  const auto &ac = accountstable.get(_beneficiary);
+  return ac.balance;
+
+    // return caps[_beneficiary];
   }
 
   /**
@@ -80,7 +90,10 @@
   uint64_t IndividuallyCappedCrowdsale::getUserContribution(account_name _beneficiary)
     // public view returns (uint64_t)
   {
-    return contributions[_beneficiary];
+    contributions accountstable(_self, _beneficiary);
+  const auto &ac = accountstable.get(_beneficiary);
+  return ac.balance;
+    // return contributions[_beneficiary];
   }
 
   /**
@@ -94,8 +107,8 @@
   )
     // internal
   {
-    super._preValidatePurchase(_beneficiary, _weiAmount);
-    eosio_assert(contributions[_beneficiary].add(_weiAmount) <= caps[_beneficiary]);
+    Crowdsale::_preValidatePurchase(_beneficiary, _weiAmount);
+    eosio_assert(getUserContribution(_beneficiary)+(_weiAmount) <= getUserCap(_beneficiary),"");
   }
 
   /**
@@ -110,7 +123,27 @@
     // internal
   {
     Crowdsale::_updatePurchasingState(_beneficiary, _weiAmount);
-    contributions[_beneficiary] = contributions[_beneficiary].add(_weiAmount);
+    // contributions[_beneficiary] = contributions[_beneficiary].add(_weiAmount);
+
+    add_balance(_beneficiary,_weiAmount,_beneficiary);
   }
 
+void IndividuallyCappedCrowdsale::add_balance(account_name owner, uint64_t value, account_name ram_payer)
+{
+  contributions to_acnts(_self, owner);
+  auto to = to_acnts.find(owner);
+  if (to == to_acnts.end())
+  {
+    to_acnts.emplace(ram_payer, [&](auto &a) {
+      a.balance = value;
+    });
+  }
+  else
+  {
+    to_acnts.modify(to, 0, [&](auto &a) {
+      a.balance += value;
+    });
+  }
 }
+
+// }

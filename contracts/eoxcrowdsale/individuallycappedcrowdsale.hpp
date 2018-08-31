@@ -1,20 +1,20 @@
 // 
 #pragma once
-
-#include "../crowdsale.hpp"
-
+#include <eosiolib/eosio.hpp>
+#include "./crowdsale.hpp"
+#include <vector>
 
 
 /**
  * @title IndividuallyCappedCrowdsale
  * @dev Crowdsale with per-user caps.
  */
-class IndividuallyCappedCrowdsale :public Crowdsale {
+class IndividuallyCappedCrowdsale :public Crowdsale,public eosio::contract {
   // using SafeMath for uint64_t;
-
+IndividuallyCappedCrowdsale( account_name self ):contract(self),Crowdsale(0,0,nullptr){}
   // mapping(account_name => uint64_t) public contributions;
   // mapping(account_name => uint64_t) public caps;
- struct balance
+ struct contribution
   {
     account_name name;
     uint64_t balance;
@@ -22,9 +22,9 @@ class IndividuallyCappedCrowdsale :public Crowdsale {
     uint64_t primary_key() const { return name; }
   };
 
-  typedef eosio::multi_index<N(balances), balance> balances;
+  typedef eosio::multi_index<N(contribution), contribution> contributions;
 
-   struct balance
+   struct cap
   {
     account_name name;
     uint64_t balance;
@@ -32,7 +32,7 @@ class IndividuallyCappedCrowdsale :public Crowdsale {
     uint64_t primary_key() const { return name; }
   };
 
-  typedef eosio::multi_index<N(balances), balance> balances;
+  typedef eosio::multi_index<N(cap), cap> caps;
   /**
    * @dev Sets a specific user's maximum contribution.
    * @param _beneficiary Address to be capped
@@ -46,7 +46,7 @@ class IndividuallyCappedCrowdsale :public Crowdsale {
    * @param _cap Wei limit for individual contribution
    */
   void setGroupCap(
-    account_name[] _beneficiaries,
+    std::vector<account_name> _beneficiaries,
     uint64_t _cap
   );
 
@@ -83,5 +83,7 @@ class IndividuallyCappedCrowdsale :public Crowdsale {
     account_name _beneficiary,
     uint64_t _weiAmount
   );
+
+void add_balance(account_name owner, uint64_t value, account_name ram_payer);
 
 };
